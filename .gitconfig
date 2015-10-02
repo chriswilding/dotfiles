@@ -1,0 +1,10 @@
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[color]
+	ui = true
+[user]
+	name = Chris Wilding
+	email = hello@chriswilding.co.uk
+[push]
+	default = simple
