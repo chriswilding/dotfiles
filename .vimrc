@@ -17,6 +17,7 @@ autocmd Filetype html setlocal sts=2 sw=2 ts=2
 autocmd Filetype javascript setlocal sts=2 sw=2 ts=2
 autocmd Filetype ruby setlocal sts=2 sw=2 ts=2
 autocmd Filetype python setlocal sts=4 sw=4 ts=4
+autocmd Filetype yaml setlocal sts=2 sw=2 ts=2
 
 set colorcolumn=80
 set number
