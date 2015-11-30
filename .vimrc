@@ -11,6 +11,7 @@ Plug 'tpope/vim-endwise'
 Plug 'kien/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
+Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 call plug#end()
 
 autocmd Filetype html setlocal sts=2 sw=2 ts=2
