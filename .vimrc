@@ -12,8 +12,10 @@ Plug 'kien/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'vim-erlang/vim-erlang-runtime'
 call plug#end()
 
+autocmd Filetype erlang setlocal sts=4 sw=4 ts=4
 autocmd Filetype html setlocal sts=2 sw=2 ts=2
 autocmd Filetype javascript setlocal sts=2 sw=2 ts=2
 autocmd Filetype ruby setlocal sts=2 sw=2 ts=2
