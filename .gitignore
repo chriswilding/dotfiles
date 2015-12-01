@@ -24,3 +24,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Vim working / temporary files
+*.spl

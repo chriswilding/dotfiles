@@ -23,4 +23,7 @@ autocmd Filetype python setlocal sts=4 sw=4 ts=4
 autocmd Filetype yaml setlocal sts=2 sw=2 ts=2
 
 set colorcolumn=80
+set complete=kspell
 set number
+set spell spelllang=en_gb
+set spellfile=$HOME/Development/dotfiles/spellfile.utf-8.add
