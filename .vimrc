@@ -47,11 +47,12 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-autocmd Filetype erlang setlocal sts=4 sw=4 ts=4
-autocmd Filetype html setlocal sts=2 sw=2 ts=2
-autocmd Filetype javascript setlocal sts=2 sw=2 ts=2
-autocmd Filetype python setlocal sts=4 sw=4 ts=4
-autocmd Filetype ruby,eruby setlocal sts=2 sw=2 ts=2
-autocmd Filetype yaml setlocal sts=2 sw=2 ts=2
+autocmd Filetype elixir setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd Filetype erlang setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
+autocmd Filetype html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd Filetype javascript setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
+autocmd Filetype python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
+autocmd Filetype ruby,eruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd Filetype yaml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd InsertEnter * set norelativenumber
 autocmd InsertLeave * set relativenumber
