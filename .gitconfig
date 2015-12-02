@@ -8,3 +8,7 @@
 	email = hello@chriswilding.co.uk
 [push]
 	default = simple
+[init]
+	templatedir = ~/Development/dotfiles/.git_template
+[alias]
+	ctags = !.git/hooks/ctags
