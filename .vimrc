@@ -48,6 +48,8 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
+
 autocmd Filetype elixir setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype erlang setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd Filetype html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
