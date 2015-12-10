@@ -7,6 +7,7 @@ filetype plugin on
 call plug#begin()
 Plug 'elixir-lang/vim-elixir'
 Plug 'kien/ctrlp.vim'
+Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'thoughtbot/vim-rspec'
@@ -38,6 +39,7 @@ set spell spelllang=en_gb
 set spellfile=$HOME/Development/dotfiles/spellfile.utf-8.add
 
 let g:markdown_fenced_languages = ['css', 'erlang', 'elixir', 'javascript', 'html', 'python', 'ruby', 'sh']
+let g:mustache_abbreviations = 1
 let g:rspec_command = "Dispatch rspec {spec}"
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1    
@@ -53,6 +55,7 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 autocmd Filetype elixir setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype erlang setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd Filetype html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd Filetype html.handlebars setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype javascript setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd Filetype python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd Filetype ruby,eruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
