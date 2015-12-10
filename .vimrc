@@ -35,7 +35,6 @@ set complete=kspell
 set number
 set omnifunc=syntaxcomplete#Complete
 set relativenumber
-set spell spelllang=en_gb
 set spellfile=$HOME/Development/dotfiles/spellfile.utf-8.add
 
 let g:markdown_fenced_languages = ['css', 'erlang', 'elixir', 'javascript', 'html', 'python', 'ruby', 'sh']
@@ -54,9 +53,11 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 
 autocmd Filetype elixir setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype erlang setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
+autocmd Filetype gitcommit set spell spelllang=en_gb
 autocmd Filetype html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype html.handlebars setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype javascript setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
+autocmd Filetype markdown set spell spelllang=en_gb
 autocmd Filetype python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd Filetype ruby,eruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype yaml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
