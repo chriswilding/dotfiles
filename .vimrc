@@ -5,6 +5,7 @@ filetype indent on
 filetype plugin on
 
 call plug#begin()
+Plug 'airblade/vim-gitgutter'
 Plug 'elixir-lang/vim-elixir'
 Plug 'kien/ctrlp.vim'
 Plug 'mustache/vim-mustache-handlebars'
