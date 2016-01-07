@@ -6,11 +6,17 @@ filetype plugin on
 
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+Plug 'cakebaker/scss-syntax.vim'
 Plug 'elixir-lang/vim-elixir'
+Plug 'ervandew/supertab'
 Plug 'kien/ctrlp.vim'
+Plug 'mattn/emmet-vim'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'rizzatti/dash.vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
@@ -18,10 +24,12 @@ Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
@@ -38,6 +46,7 @@ set omnifunc=syntaxcomplete#Complete
 set relativenumber
 set spellfile=$HOME/Development/dotfiles/spellfile.utf-8.add
 
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 let g:markdown_fenced_languages = ['css', 'erlang', 'elixir', 'javascript', 'html', 'python', 'ruby', 'sh']
 let g:mustache_abbreviations = 1
 let g:rspec_command = "Dispatch rspec {spec}"
