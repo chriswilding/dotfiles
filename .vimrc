@@ -61,6 +61,7 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 
+autocmd Filetype cucumber setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype elixir setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype erlang setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd Filetype gitcommit set spell spelllang=en_gb
