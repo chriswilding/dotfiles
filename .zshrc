@@ -90,3 +90,10 @@ eval "$(rbenv init -)"
 
 # Powerline
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# LaTeX
+export PATH="/usr/local/texlive/2015basic/bin/x86_64-darwin:$PATH"
+
+# Go
+export PATH="/usr/local/go/bin:$PATH"
+export GOPATH="$HOME/Development/go"
