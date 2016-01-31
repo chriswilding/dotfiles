@@ -39,8 +39,11 @@ Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
+set backup
+set backupdir=/tmp//
 set colorcolumn=80
 set complete=kspell
+set directory=/tmp//
 set number
 set omnifunc=syntaxcomplete#Complete
 set relativenumber
