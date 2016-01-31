@@ -60,6 +60,8 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
+command! -bang Q quit<bang>
+command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 
 autocmd Filetype cucumber setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype elixir setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
