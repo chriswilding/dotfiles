@@ -71,6 +71,7 @@ autocmd Filetype javascript setlocal expandtab shiftwidth=2 softtabstop=2 tabsto
 autocmd Filetype markdown set spell spelllang=en_gb
 autocmd Filetype python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd Filetype ruby,eruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd Filetype tex setlocal expandtab spell shiftwidth=2 softtabstop=2 tabstop=2 textwidth=80
 autocmd Filetype yaml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd InsertEnter * set norelativenumber
 autocmd InsertLeave * set relativenumber
