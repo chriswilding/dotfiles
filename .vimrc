@@ -8,6 +8,7 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'ervandew/supertab'
 Plug 'kien/ctrlp.vim'
@@ -61,6 +62,8 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+inoremap jk <esc>
 
 command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 command! -bang Q quit<bang>
