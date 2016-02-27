@@ -1,6 +1,6 @@
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
 [color]
 	ui = true
 [user]
@@ -9,6 +9,6 @@
 [push]
 	default = simple
 [init]
-	templatedir = ~/Development/dotfiles/.git_template
+	templatedir = ~/.git_template
 [alias]
 	ctags = !.git/hooks/ctags
