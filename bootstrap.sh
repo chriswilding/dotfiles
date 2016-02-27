@@ -1,3 +1,4 @@
+ln -s .ctags ~/.ctags
 ln -s .gemrc ~/.gemrc
 ln -s .gitconfig ~/.gitconfig
 ln -s .gitignore_global ~/.gitignore_global
