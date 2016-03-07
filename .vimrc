@@ -19,7 +19,6 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'rizzatti/dash.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'thoughtbot/vim-rspec'
@@ -83,6 +82,10 @@ map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>t :call RunCurrentSpecFile()<CR>
+
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 
 set colorcolumn=80
 set complete=kspell
