@@ -91,7 +91,9 @@ python3 del powerline_setup
 set colorcolumn=80
 set complete=kspell
 set directory=/tmp//
+set mouse=a
 set number
 set omnifunc=syntaxcomplete#Complete
 set relativenumber
 set spellfile=$HOME/Development/dotfiles/spellfile.utf-8.add
+set ttymouse=xterm2
