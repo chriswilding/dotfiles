@@ -21,6 +21,7 @@ Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'rizzatti/dash.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdtree'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
@@ -71,6 +72,7 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 
 inoremap jk <esc>
 
+let NERDTreeShowHidden=1
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 let g:markdown_fenced_languages = ['css', 'erlang', 'elixir', 'javascript', 'html', 'python', 'ruby', 'sh']
 let g:mustache_abbreviations = 1
@@ -79,6 +81,7 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 
+map <C-n> :NERDTreeToggle<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
