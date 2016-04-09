@@ -22,6 +22,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'rizzatti/dash.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'shougo/neocomplete.vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
@@ -58,6 +59,7 @@ autocmd Filetype javascript setlocal expandtab shiftwidth=2 softtabstop=2 tabsto
 autocmd Filetype markdown set spell spelllang=en_gb
 autocmd Filetype python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd Filetype ruby,eruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType ruby compiler ruby
 autocmd Filetype scss setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype tex setlocal expandtab spell shiftwidth=2 softtabstop=2 tabstop=2 textwidth=80
 autocmd Filetype text setlocal spell
@@ -74,6 +76,7 @@ inoremap jk <esc>
 
 let NERDTreeShowHidden=1
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:go_fmt_command = "goimports"
 let g:markdown_fenced_languages = ['css', 'erlang', 'elixir', 'javascript', 'html', 'python', 'ruby', 'sh']
 let g:mustache_abbreviations = 1
 let g:rspec_command = "Dispatch rspec {spec}"
@@ -93,6 +96,7 @@ python3 del powerline_setup
 
 set colorcolumn=80
 set complete=kspell
+set completeopt-=preview
 set directory=/tmp//
 set mouse=a
 set number

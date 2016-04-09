@@ -6,9 +6,17 @@
 [user]
 	name = Chris Wilding
 	email = hello@chriswilding.co.uk
+	useconfigonly = true
+	signingkey = 4AED59F0
 [push]
 	default = simple
 [init]
 	templatedir = ~/.git_template
 [alias]
 	ctags = !.git/hooks/ctags
+[rebase]
+	autostash = true
+[grep]
+	threads = 8
+[stash]
+	showPatch = true
