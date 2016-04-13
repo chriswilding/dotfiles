@@ -62,6 +62,12 @@ export PATH="$HOME/Library/Python/3.5/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
+# source zshrc content that is outside of source control
+if [ -r ~/.zshrc_private ]
+then
+	source ~/.zshrc_private
+fi
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
