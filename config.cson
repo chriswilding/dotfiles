@@ -1,0 +1,22 @@
+"*":
+  autosave:
+    enabled: true
+  core:
+    audioBeep: false
+    disabledPackages: [
+      "metrics"
+      "exception-reporting"
+    ]
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    fontFamily: "Source Code Pro"
+    scrollPastEnd: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+  "git-diff":
+    showIconsInEditorGutter: true
+  welcome:
+    showOnStartup: false
