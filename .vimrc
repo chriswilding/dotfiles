@@ -79,6 +79,7 @@ inoremap jk <esc>
 
 let NERDTreeShowHidden=1
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:ctrlp_show_hidden = 1
 let g:go_fmt_command = "goimports"
 let g:markdown_fenced_languages = ['css', 'erlang', 'elixir', 'javascript', 'html', 'python', 'ruby', 'sh']
 let g:mustache_abbreviations = 1
