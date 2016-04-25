@@ -7,10 +7,6 @@
       "metrics"
       "exception-reporting"
     ]
-    themes: [
-      "one-dark-ui"
-      "solarized-dark-syntax"
-    ]
   editor:
     fontFamily: "Source Code Pro"
     scrollPastEnd: true
@@ -20,3 +16,6 @@
     showIconsInEditorGutter: true
   welcome:
     showOnStartup: false
+".go.source":
+  editor:
+    tabLength: 8

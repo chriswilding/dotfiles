@@ -57,9 +57,6 @@ export ZSH_TMUX_AUTOSTART=true
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# Python (for tmux)
-export PATH="$HOME/Library/Python/3.5/bin:$PATH"
-
 source $ZSH/oh-my-zsh.sh
 
 # source zshrc content that is outside of source control
@@ -99,9 +96,6 @@ export GOPATH="$HOME/Development/go"
 
 # LaTeX
 export PATH="/usr/local/texlive/2015basic/bin/x86_64-darwin:$PATH"
-
-# Powerline
-. /Users/Chris/Library/Python/3.5/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
