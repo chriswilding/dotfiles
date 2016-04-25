@@ -14,6 +14,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
 Plug 'joshdick/onedark.vim'
+Plug 'joshdick/airline-onedark.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mxw/vim-jsx'
@@ -79,6 +80,7 @@ inoremap jk <esc>
 
 let NERDTreeShowHidden=1
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:airline_theme='onedark'
 let g:ctrlp_show_hidden = 1
 let g:go_fmt_command = "goimports"
 let g:markdown_fenced_languages = ['css', 'erlang', 'elixir', 'javascript', 'html', 'python', 'ruby', 'sh']
