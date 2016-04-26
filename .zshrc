@@ -94,6 +94,9 @@ fi
 export PATH="/usr/local/go/bin:$PATH"
 export GOPATH="$HOME/Development/go"
 
+# Homebrew
+export HOMEBREW_NO_ANALYTICS=1
+
 # LaTeX
 export PATH="/usr/local/texlive/2015basic/bin/x86_64-darwin:$PATH"
 
