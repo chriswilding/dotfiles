@@ -100,6 +100,7 @@ set colorcolumn=80
 set complete=kspell
 set completeopt-=preview
 set directory=/tmp//
+set guicolors
 set mouse=a
 set number
 set omnifunc=syntaxcomplete#Complete
