@@ -79,7 +79,7 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 inoremap jk <esc>
 
 let NERDTreeShowHidden=1
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabDefaultCompletionType = ""
 let g:airline_theme='onedark'
 let g:ctrlp_show_hidden = 1
 let g:go_fmt_command = "goimports"
@@ -97,7 +97,7 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>t :call RunCurrentSpecFile()<CR>
 
 set colorcolumn=80
-set complete=kspell
+set complete+=k
 set completeopt-=preview
 set directory=/tmp//
 set guicolors
