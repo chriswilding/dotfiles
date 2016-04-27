@@ -97,6 +97,9 @@ export GOPATH="$HOME/Development/go"
 # Homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
+# iTerm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 # LaTeX
 export PATH="/usr/local/texlive/2015basic/bin/x86_64-darwin:$PATH"
 
