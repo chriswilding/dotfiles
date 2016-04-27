@@ -52,6 +52,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(bower bundler gem git rails sudo tmux web-search)
 
 # User configuration
+export ZSH_TMUX_AUTOSTART=true
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
