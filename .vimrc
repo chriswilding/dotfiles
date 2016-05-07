@@ -100,7 +100,7 @@ set colorcolumn=80
 set complete+=k
 set completeopt-=preview
 set directory=/tmp//
-set guicolors
+set termguicolors
 set mouse=a
 set number
 set omnifunc=syntaxcomplete#Complete
