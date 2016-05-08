@@ -99,6 +99,7 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 set colorcolumn=80
 set complete+=k
 set completeopt-=preview
+set guifont=Source\ Code\ Pro:h14
 set directory=/tmp//
 set termguicolors
 set mouse=a
