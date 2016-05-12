@@ -15,3 +15,6 @@
 (dolist (p packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+;; Settings
+(menu-bar-mode -1)
