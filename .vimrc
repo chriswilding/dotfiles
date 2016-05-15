@@ -93,6 +93,7 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 
+map <C-b> :CtrlPBuffer<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>l :call RunLastSpec()<CR>
