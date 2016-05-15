@@ -103,12 +103,13 @@ map <leader>t :call RunCurrentSpecFile()<CR>
 set colorcolumn=80
 set complete+=k
 set completeopt-=preview
-set guifont=Source\ Code\ Pro:h14
 set directory=/tmp//
-set termguicolors
+set guifont=Source\ Code\ Pro:h14
+set modelines=0
 set mouse=a
 set number
 set omnifunc=syntaxcomplete#Complete
 set relativenumber
 set spellfile=$HOME/Development/dotfiles/spellfile.utf-8.add
+set termguicolors
 set ttymouse=xterm2
