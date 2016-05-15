@@ -10,7 +10,6 @@
   editor:
     fontFamily: "Source Code Pro"
     scrollPastEnd: true
-    softWrap: true
     softWrapAtPreferredLineLength: true
   "git-diff":
     showIconsInEditorGutter: true
