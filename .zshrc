@@ -90,6 +90,9 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Ack
+export ACKRC=".ackrc"
+
 # Go
 export PATH="/usr/local/go/bin:$PATH"
 export GOPATH="$HOME/Development/go"
