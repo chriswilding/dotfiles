@@ -10,6 +10,7 @@
 .VolumeIcon.icns
 ._*
 .apdisk
+.bundle
 .fseventsd
 Icon
 Network Trash Folder
