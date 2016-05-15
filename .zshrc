@@ -107,5 +107,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH="/usr/local/texlive/2015basic/bin/x86_64-darwin:$PATH"
 
 # Ruby
-export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
