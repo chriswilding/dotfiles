@@ -100,10 +100,11 @@ map <leader>l :call RunLastSpec()<CR>
 map <leader>s :call RunNearestSpec()<CR>
 map <leader>t :call RunCurrentSpecFile()<CR>
 
-set colorcolumn=80
+set colorcolumn=80,120
 set complete+=k
 set completeopt-=preview
 set cursorline
+set diffopt=vertical
 set directory=/tmp//
 set guifont=Source\ Code\ Pro:h14
 set modelines=0
