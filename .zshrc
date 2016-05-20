@@ -90,8 +90,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Ack
-export ACKRC=".ackrc"
+# bin
+export PATH="$HOME/bin:$PATH"
 
 # Go
 export PATH="/usr/local/go/bin:$PATH"
@@ -101,10 +101,15 @@ export GOPATH="$HOME/Development/go"
 export HOMEBREW_NO_ANALYTICS=1
 
 # iTerm2
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
 # LaTeX
 export PATH="/usr/local/texlive/2015basic/bin/x86_64-darwin:$PATH"
+
+# Node
+export PATH="$PATH:./node_modules/.bin/"
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
 
 # Ruby
 eval "$(rbenv init -)"
