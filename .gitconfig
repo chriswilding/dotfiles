@@ -1,32 +1,42 @@
-[core]
-	editor = vim
-	excludesfile = ~/.gitignore_global
-	pager = /usr/local/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
-	whitespace = cr-at-eol,blank-at-eof,blank-at-eol,tab-in-indent
-[color]
-	ui = true
-[user]
-	name = Chris Wilding
-	email = hello@chriswilding.co.uk
-	useconfigonly = true
-	signingkey = 4AED59F0
-[push]
-	default = simple
-[init]
-	templatedir = ~/.git_template
 [alias]
 	ctags = !.git/hooks/ctags
-[rebase]
-	autostash = true
-[grep]
-	threads = 8
-[stash]
-	showPatch = true
+[branch]
+	autoSetupMerge = true
+[color]
+	ui = true
 [commit]
-	gpgsign = true
+	gpgSign = true
+[core]
+	autocrlf = input
+	editor = vim
+	excludesFile = ~/.gitignore_global
+	pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
+	whitespace = cr-at-eol,blank-at-eof,blank-at-eol,tab-in-indent
 [credential]
 	helper = osxkeychain
 [diff]
 	compactionHeuristic = true
+[fetch]
+	prune = true
+[grep]
+	threads = 8
+[init]
+	templateDir = ~/.git_template
+[help]
+	autoCorrect = 1
+[push]
+	default = simple
+[rebase]
+	autoStash = true
+[rerere]
+	autoUpdate = true
+	enabled = true
+[stash]
+	showPatch = true
 [submodule]
 	fetchJobs = 4
+[user]
+	email = hello@chriswilding.co.uk
+	name = Chris Wilding
+	signingKey = 4AED59F0
+	useConfigOnly = true
