@@ -93,9 +93,6 @@ fi
 # bin
 export PATH="$HOME/bin:$PATH"
 
-# dotnet
-export PATH="/usr/local/share/dotnet:$PATH"
-
 # Go
 export PATH="/usr/local/go/bin:$PATH"
 export GOPATH="$HOME/Development/go"
