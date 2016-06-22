@@ -74,6 +74,7 @@ inoremap jk <esc>
 let NERDTreeShowHidden=1
 let g:airline_theme='onedark'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:markdown_fenced_languages = ['css', 'erlang', 'elixir', 'javascript', 'html', 'python', 'ruby', 'sh']
 let g:mustache_abbreviations = 1
 let g:rspec_command = "Dispatch rspec {spec}"
