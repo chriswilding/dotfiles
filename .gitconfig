@@ -1,6 +1,7 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	pager = /usr/local/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
 [color]
 	ui = true
 [user]
@@ -24,3 +25,7 @@
 	gpgsign = true
 [credential]
 	helper = osxkeychain
+[diff]
+	compactionHeuristic = true
+[submodule]
+	fetchJobs = 4
