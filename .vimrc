@@ -11,23 +11,14 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
-Plug 'ervandew/supertab'
-Plug 'fatih/vim-go'
-Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do':  'make fsautocomplete' }
 Plug 'joshdick/airline-onedark.vim'
 Plug 'joshdick/onedark.vim'
-Plug 'mattn/emmet-vim'
-Plug 'mileszs/ack.vim'
-Plug 'mustache/vim-mustache-handlebars'
 Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'rizzatti/dash.vim'
 Plug 'rking/ag.vim'
-Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
-Plug 'shougo/neocomplete.vim'
 Plug 'slim-template/vim-slim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-bundler'
@@ -51,17 +42,14 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 autocmd Filetype css setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype cucumber setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype elixir setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
-autocmd Filetype erlang setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd Filetype gitcommit set spell spelllang=en_gb
 autocmd Filetype html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
-autocmd Filetype html.handlebars setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype javascript setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype markdown set spell spelllang=en_gb
 autocmd Filetype python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
@@ -84,10 +72,8 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 inoremap jk <esc>
 
 let NERDTreeShowHidden=1
-let g:SuperTabDefaultCompletionType = ""
 let g:airline_theme='onedark'
 let g:ctrlp_show_hidden = 1
-let g:go_fmt_command = "goimports"
 let g:markdown_fenced_languages = ['css', 'erlang', 'elixir', 'javascript', 'html', 'python', 'ruby', 'sh']
 let g:mustache_abbreviations = 1
 let g:rspec_command = "Dispatch rspec {spec}"
