@@ -1,0 +1,40 @@
+channels = (
+  { name = "#elixir"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#python"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#ruby-lang"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#rust"; chatnet = "Freenode"; autojoin = "yes"; }
+);
+
+chatnets = {
+  Freenode = {
+    nick = "ChrisWilding";
+    sasl_mechanism = "PLAIN";
+    sasl_password = "PASSWORD";
+    sasl_username = "ChrisWilding";
+    type = "IRC";
+  };
+};
+
+ignores = ( 
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "*" ); }
+);
+
+servers = (
+  {
+    address = "irc.freenode.net";
+    autoconnect = "yes";
+    chatnet = "Freenode";
+    port = "6697";
+    ssl_verify = "yes";
+    use_ssl = "yes";
+  }
+);
+
+settings = {
+  core = {
+    nick = "Chris";
+    real_name = "Chris Wilding";
+    user_name = "Chris";
+  };
+  "fe-text" = { actlist_sort = "refnum"; };
+};
