@@ -20,6 +20,7 @@ Plug 'rizzatti/dash.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim'
+Plug 'ternjs/tern_for_vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
@@ -51,6 +52,7 @@ autocmd Filetype elixir setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype gitcommit set spell spelllang=en_gb
 autocmd Filetype html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype javascript setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd Filetype javascript map <C-]> :TernDef<CR>
 autocmd Filetype markdown set spell spelllang=en_gb
 autocmd Filetype python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd Filetype ruby,eruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
