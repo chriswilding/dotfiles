@@ -87,6 +87,7 @@ let g:rubycomplete_rails = 1
 map <C-n> :NERDTreeToggle<CR>
 map <leader>a :call RunAllSpecs()<CR>
 map <leader>b :CtrlPBuffer<CR>
+map <leader>d :Dash<CR>
 map <leader>l :call RunLastSpec()<CR>
 map <leader>n :NERDTreeFind<CR>
 map <leader>s :call RunNearestSpec()<CR>
