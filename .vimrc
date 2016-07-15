@@ -100,6 +100,7 @@ set cursorline
 set diffopt=vertical
 set directory=/tmp//
 set guifont=Source\ Code\ Pro:h14
+set hlsearch
 set modelines=0
 set mouse=a
 set number
