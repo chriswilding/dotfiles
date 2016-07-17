@@ -1,9 +1,3 @@
-set nocompatible
-syntax on
-filetype on
-filetype indent on
-filetype plugin on
-
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
