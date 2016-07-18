@@ -113,3 +113,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Ruby
 eval "$(rbenv init -)"
+
+# Visual Studio Code
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
