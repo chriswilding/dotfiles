@@ -1,0 +1,19 @@
+{
+    "editor.fontFamily": "mononoki",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.glyphMargin": true,
+    "editor.renderWhitespace": true,
+    "editor.renderControlCharacters": true,
+    "editor.renderIndentGuides": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "terminal.external.osxExec": "iTerm2.app",
+    "workbench.editor.showTabs": false
+}
