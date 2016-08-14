@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bower bundler gem git mix nvm rails sudo tmux web-search)
+plugins=(bundler gem git mix nvm sudo tmux web-search)
 
 # User configuration
 export ZSH_TMUX_AUTOSTART="true"
@@ -69,11 +69,11 @@ fi
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -106,6 +106,9 @@ test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_int
 # LaTeX
 export PATH="/usr/local/texlive/2015basic/bin/x86_64-darwin:$PATH"
 
+# Manpager
+export MANPAGER="/bin/sh -c \"col -b | vim -Nu NONE -c 'runtime macros/less.vim' -c 'setf man' -\""
+
 # Node
 export PATH="$PATH:./node_modules/.bin/"
 export NVM_DIR="$HOME/.nvm"
@@ -114,5 +117,11 @@ export NVM_DIR="$HOME/.nvm"
 # Ruby
 eval "$(rbenv init -)"
 
+# Rust
+export CARGO_HOME="$HOME/.cargo"
+export PATH="$HOME/.cargo/bin:$PATH"
+export RUST_SRC_PATH="$HOME/Development/rust/src"
+
 # Visual Studio Code
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
