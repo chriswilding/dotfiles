@@ -52,10 +52,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(bundler gem git mix nvm sudo tmux web-search)
 
 # User configuration
-export ZSH_TMUX_AUTOSTART="true"
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+# export ZSH_TMUX_AUTOSTART="true"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,38 +87,14 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# bin
-export PATH="$HOME/bin:$PATH"
-
-# Go
-export PATH="/usr/local/go/bin:$PATH"
-export GOPATH="$HOME/Development/go"
-
 # Homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
 # iTerm2
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
-# LaTeX
-export PATH="/usr/local/texlive/2015basic/bin/x86_64-darwin:$PATH"
-
 # Manpager
 export MANPAGER="/bin/sh -c \"col -b | vim -Nu NONE -c 'runtime macros/less.vim' -c 'setf man' -\""
 
-# Node
-export PATH="$PATH:./node_modules/.bin/"
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
-
-# Ruby
-eval "$(rbenv init -)"
-
-# Rust
-export CARGO_HOME="$HOME/.cargo"
-export PATH="$HOME/.cargo/bin:$PATH"
-export RUST_SRC_PATH="$HOME/Development/rust/src"
-
 # Visual Studio Code
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
