@@ -5,7 +5,6 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
-Plug 'flowtype/vim-flow'
 Plug 'joshdick/airline-onedark.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'mxw/vim-jsx'
@@ -38,12 +37,14 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 autocmd Filetype css setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype cucumber setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype elixir setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd Filetype erlang setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype gitcommit set spell spelllang=en_gb
 autocmd Filetype html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype javascript setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
