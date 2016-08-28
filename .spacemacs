@@ -36,7 +36,6 @@ values."
      latex
      markdown
      org
-     osx
      python
      react
      (ruby :variables
