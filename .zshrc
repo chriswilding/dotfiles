@@ -87,6 +87,11 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Emacs
+alias e="emacsclient -t"
+alias es="emacs --daemon"
+alias eq="emacsclient -e \"(kill-emacs)\""
+
 # Homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
