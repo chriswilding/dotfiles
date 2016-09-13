@@ -4,6 +4,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'geekjuice/vim-mocha'
 Plug 'joshdick/onedark.vim'
 Plug 'rizzatti/dash.vim'
 Plug 'rking/ag.vim'
@@ -71,15 +72,17 @@ let g:rspec_command = "Dispatch rspec {spec}"
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
+let mapleader=" "
 
 map <C-n> :NERDTreeToggle<CR>
-map <leader>a :call RunAllSpecs()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>t :call RunCurrentSpecFile()<CR>
 map <leader>b :CtrlPBuffer<CR>
 map <leader>d :Dash<CR>
 map <leader>l :call RunLastSpec()<CR>
 map <leader>n :NERDTreeFind<CR>
-map <leader>s :call RunNearestSpec()<CR>
-map <leader>t :call RunCurrentSpecFile()<CR>
 
 set colorcolumn=80,120
 set complete+=k
