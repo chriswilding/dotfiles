@@ -67,9 +67,9 @@ fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='emacsclient -t'
+  export EDITOR='vim'
 else
-  export EDITOR='emacsclient -t'
+  export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -86,11 +86,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Emacs
-alias e="emacsclient -t"
-alias es="emacs --daemon"
-alias eq="emacsclient -e \"(kill-emacs)\""
 
 # Homebrew
 export HOMEBREW_NO_ANALYTICS=1
