@@ -67,9 +67,9 @@ fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='emacsclient -t'
 else
-  export EDITOR='vim'
+  export EDITOR='emacsclient -t'
 fi
 
 # Compilation flags
@@ -87,6 +87,9 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Emacs
+alias e="emacsclient -t"
+
 # Homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -95,6 +98,9 @@ test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_int
 
 # Manpager
 export MANPAGER="/bin/sh -c \"col -b | vim -Nu NONE -c 'runtime macros/less.vim' -c 'setf man' -\""
+
+# Node
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
 # Visual Studio Code
 export DOTNET_CLI_TELEMETRY_OPTOUT=1

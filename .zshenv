@@ -9,8 +9,6 @@ export PATH="/usr/local/texlive/2015basic/bin/x86_64-darwin:$PATH"
 
 # Node
 export PATH="$PATH:./node_modules/.bin/"
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
 
 # Ruby
 eval "$(rbenv init -)"
