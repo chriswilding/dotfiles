@@ -64,6 +64,7 @@ inoremap jk <esc>
 
 let NERDTreeShowHidden=1
 let g:airline_theme='onedark'
+let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:markdown_fenced_languages = ['css', 'erlang', 'elixir', 'javascript', 'html', 'python', 'ruby', 'sh']
@@ -72,14 +73,12 @@ let g:rspec_command = "Dispatch rspec {spec}"
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
-let mapleader=" "
 
 map <C-n> :NERDTreeToggle<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>t :call RunCurrentSpecFile()<CR>
-map <leader>b :CtrlPBuffer<CR>
 map <leader>d :Dash<CR>
 map <leader>l :call RunLastSpec()<CR>
 map <leader>n :NERDTreeFind<CR>
