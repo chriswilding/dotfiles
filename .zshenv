@@ -11,7 +11,5 @@ export PATH="/usr/local/texlive/2015basic/bin/x86_64-darwin:$PATH"
 export PATH="$PATH:./node_modules/.bin/"
 
 # Ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-# Visual Studio Code
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
