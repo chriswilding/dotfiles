@@ -5,7 +5,7 @@ export ZSH=/Users/Chris/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="dracula"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,7 +52,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(bundler gem git mix nvm sudo tmux web-search)
 
 # User configuration
-export ZSH_TMUX_AUTOSTART="true"
+# export ZSH_TMUX_AUTOSTART="true"
 
 source $ZSH/oh-my-zsh.sh
 

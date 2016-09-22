@@ -5,7 +5,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'geekjuice/vim-mocha'
 Plug 'rizzatti/dash.vim'
@@ -56,7 +56,7 @@ autocmd Filetype yaml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd InsertEnter * set norelativenumber
 autocmd InsertLeave * set relativenumber
 
-colorscheme onedark
+color dracula
 
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 command! -bang Q quit<bang>
@@ -65,7 +65,6 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 inoremap jk <esc>
 
 let NERDTreeShowHidden=1
-let g:airline_theme='onedark'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
