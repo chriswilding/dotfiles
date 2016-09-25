@@ -5,7 +5,7 @@ export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$HOME/bin:$PATH"
 
 # LaTeX
-export PATH="/usr/local/texlive/2015basic/bin/x86_64-darwin:$PATH"
+export PATH="/usr/local/texlive/2016basic/bin/x86_64-darwin:$PATH"
 
 # Node
 export PATH="$PATH:./node_modules/.bin/"
