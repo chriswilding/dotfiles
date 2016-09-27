@@ -1,5 +1,3 @@
-syntax enable
-
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
@@ -101,3 +99,9 @@ set relativenumber
 set spellfile=$HOME/Development/dotfiles/spellfile.utf-8.add
 set termguicolors
 set ttymouse=xterm2
+
+function! FormatJSON()
+  execute "%!" . "python -m json.tool"
+endfunction
+
+command! FormatJSON call FormatJSON()

@@ -52,7 +52,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(bundler gem git mix nvm sudo tmux web-search)
 
 # User configuration
-# export ZSH_TMUX_AUTOSTART="true"
+export ZSH_TMUX_AUTOSTART="true"
 
 source $ZSH/oh-my-zsh.sh
 
