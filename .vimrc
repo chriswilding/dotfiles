@@ -83,6 +83,7 @@ map <leader>l :call RunLastSpec()<CR>
 map <leader>n :NERDTreeFind<CR>
 
 set background=dark
+set clipboard=unnamed
 set colorcolumn=80,120
 set complete+=k
 set completeopt-=preview
