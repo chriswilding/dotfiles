@@ -185,6 +185,8 @@ set diffopt=vertical
 set directory=/tmp//
 set hlsearch
 set lazyredraw
+set list
+set listchars=space:·
 set modelines=0
 set mouse=a
 set number
