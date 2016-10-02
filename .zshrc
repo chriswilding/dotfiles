@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler gem git mix nvm sudo tmux web-search)
+plugins=(bundler gem git mix nvm sudo tmux vi-mode web-search)
 
 # User configuration
 export ZSH_TMUX_AUTOSTART="true"
@@ -95,3 +95,6 @@ test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_int
 
 # Manpager
 export MANPAGER="/bin/sh -c \"col -b | vim -Nu NONE -c 'runtime macros/less.vim' -c 'setf man' -\""
+
+# vi-mode plugin
+bindkey -M viins "jk" vi-cmd-mode
