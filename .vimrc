@@ -166,12 +166,7 @@ let g:rubycomplete_rails = 1
 let mapleader=","
 
 map <C-n> :NERDTreeToggle<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>t :call RunCurrentSpecFile()<CR>
 map <leader>d :Dash<CR>
-map <leader>l :call RunLastSpec()<CR>
 map <leader>n :NERDTreeFind<CR>
 
 nnoremap j gj
@@ -185,7 +180,9 @@ set completeopt-=preview
 set cursorline
 set diffopt=vertical
 set directory=/tmp//
+set hidden
 set hlsearch
+set ignorecase
 set lazyredraw
 set list
 set listchars=space:·
@@ -194,7 +191,9 @@ set mouse=a
 set number
 set omnifunc=syntaxcomplete#Complete
 set relativenumber
+set scrolloff=5
 set showmatch
+set smartcase
 set spellfile=$HOME/Development/dotfiles/spellfile.utf-8.add
 set termguicolors
 set ttymouse=xterm2
