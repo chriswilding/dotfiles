@@ -97,4 +97,5 @@ test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_int
 export MANPAGER="/bin/sh -c \"col -b | vim -Nu NONE -c 'runtime macros/less.vim' -c 'setf man' -\""
 
 # vi-mode plugin
+bindkey -M menuselect '^[[Z' reverse-menu-complete
 bindkey -M viins "jk" vi-cmd-mode
