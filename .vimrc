@@ -71,7 +71,8 @@ augroup END
 
 augroup filetype_gitcommit
 	autocmd!
-	autocmd Filetype gitcommit setlocal spell spelllang=en_gb
+	autocmd Filetype gitcommit setlocal spell
+	autocmd Filetype gitcommit setlocal spelllang=en_gb
 augroup END
 
 augroup filetype_html
@@ -93,7 +94,8 @@ augroup END
 
 augroup filetype_markdown
 	autocmd!
-	autocmd Filetype markdown setlocal spell spelllang=en_gb
+	autocmd Filetype markdown setlocal spell
+	autocmd Filetype markdown setlocal spelllang=en_gb
 augroup END
 
 augroup filetype_python
@@ -126,14 +128,16 @@ augroup filetype_tex
 	autocmd Filetype tex setlocal expandtab
 	autocmd Filetype tex setlocal shiftwidth=2
 	autocmd Filetype tex setlocal softtabstop=2
-	autocmd Filetype tex setlocal spell spelllang=en_gb
+	autocmd Filetype tex setlocal spell
+	autocmd Filetype tex setlocal spelllang=en_gb
 	autocmd Filetype tex setlocal tabstop=2
 	autocmd Filetype tex setlocal textwidth=80
 augroup END
 
 augroup filetype_text
 	autocmd!
-	autocmd Filetype text setlocal spell spelllang=en_gb
+	autocmd Filetype text setlocal spell
+	autocmd Filetype text setlocal spelllang=en_gb
 augroup END
 
 augroup filetype_yaml
@@ -184,8 +188,6 @@ set hidden
 set hlsearch
 set ignorecase
 set lazyredraw
-set list
-set listchars=space:·
 set modelines=0
 set mouse=a
 set number
