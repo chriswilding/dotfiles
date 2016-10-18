@@ -1,19 +1,39 @@
+// Place your settings in this file to overwrite the default settings
 {
-    "editor.fontFamily": "mononoki",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 14,
-    "editor.glyphMargin": true,
-    "editor.renderWhitespace": true,
-    "editor.renderControlCharacters": true,
+    // Controls the font family.
+    "editor.fontFamily": "Source Code Pro",
+
+    // Controls the font size in pixels.
+    "editor.fontSize": 13,
+
+    // Columns at which to show vertical rulers
+    "editor.rulers": [80, 120],
+
+    // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
+    "editor.tabSize": 2,
+
+    // Controls whether the editor should render whitespace characters
+    "editor.renderWhitespace": "boundary",
+
+    // Controls whether the editor should render indent guides
     "editor.renderIndentGuides": true,
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "files.autoSave": "onFocusChange",
+
+    // Automatically update extensions
+    "extensions.autoUpdate": true,
+
+    // When enabled, will trim trailing whitespace when you save a file.
     "files.trimTrailingWhitespace": true,
+
+    // Controls auto save of dirty files. Accepted values:  "off", "afterDelay", "onFocusChange" (editor loses focus), "onWindowChange" (window loses focus). If set to "afterDelay", you can configure the delay in "files.autoSaveDelay".
+    "files.autoSave": "onFocusChange",
+
+    // Customizes which terminal application to run on OS X.
+    "terminal.external.osxExec": "iTerm.app",
+
+    // Enable usage data and errors to be sent to Microsoft.
     "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "terminal.external.osxExec": "iTerm2.app",
-    "workbench.editor.showTabs": false
+
+    // Enable crash reports to be sent to Microsoft.
+    // This option requires restart to take effect.
+    "telemetry.enableCrashReporter": false
 }
