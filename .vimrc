@@ -177,6 +177,8 @@ map <leader>n :NERDTreeFind<CR>
 
 nnoremap j gj
 nnoremap k gk
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
 
 set background=dark
 set clipboard=unnamed
