@@ -190,6 +190,7 @@ set modelines=0
 set mouse=a
 set number
 set omnifunc=syntaxcomplete#Complete
+set path+=**
 set relativenumber
 set scrolloff=5
 set showmatch
