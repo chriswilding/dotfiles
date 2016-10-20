@@ -157,11 +157,11 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 inoremap jk <esc>
 
 let NERDTreeShowHidden=1
-let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore .git -g ""'
 let g:ctrlp_working_path_mode = 0
 let mapleader=","
 
