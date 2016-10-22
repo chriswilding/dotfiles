@@ -20,128 +20,38 @@ Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
-augroup config
-	autocmd InsertEnter * set norelativenumber
-	autocmd InsertLeave * set relativenumber
-augroup END
-
-augroup filetype_css
-	autocmd!
-	autocmd Filetype css setlocal expandtab
-	autocmd Filetype css setlocal shiftwidth=2
-	autocmd Filetype css setlocal softtabstop=2
-	autocmd Filetype css setlocal tabstop=2
-augroup END
-
-augroup filetype_cucumber
-	autocmd!
-	autocmd Filetype cucumber setlocal expandtab
-	autocmd Filetype cucumber setlocal shiftwidth=2
-	autocmd Filetype cucumber setlocal softtabstop=2
-	autocmd Filetype cucumber setlocal tabstop=2
-augroup END
-
-augroup filetype_elixir
-	autocmd!
-	autocmd Filetype elixir setlocal expandtab
-	autocmd Filetype elixir setlocal shiftwidth=2
-	autocmd Filetype elixir setlocal softtabstop=2
-	autocmd Filetype elixir setlocal tabstop=2
-augroup END
-
-augroup filetype_erlang
-	autocmd!
-	autocmd Filetype erlang setlocal expandtab
-	autocmd Filetype erlang setlocal shiftwidth=2
-	autocmd Filetype erlang setlocal softtabstop=2
-	autocmd Filetype erlang setlocal tabstop=2
-augroup END
-
-augroup filetype_gitcommit
-	autocmd!
-	autocmd Filetype gitcommit setlocal spell
-	autocmd Filetype gitcommit setlocal spelllang=en_gb
-augroup END
-
-augroup filetype_html
-	autocmd!
-	autocmd Filetype html setlocal expandtab
-	autocmd Filetype html setlocal shiftwidth=2
-	autocmd Filetype html setlocal softtabstop=2
-	autocmd Filetype html setlocal tabstop=2
-augroup END
-
-augroup filetype_javascript
+augroup abbrev
 	autocmd!
 	autocmd FileType javascript iabbrev cont context('', () => {<CR>});<Esc>k0f'a
 	autocmd FileType javascript iabbrev desc describe('', () => {<CR>});<Esc>k0f'a
 	autocmd FileType javascript iabbrev it it('', () => {<CR>});<Esc>k0f'a
-	autocmd Filetype javascript setlocal expandtab
-	autocmd Filetype javascript setlocal shiftwidth=2
-	autocmd Filetype javascript setlocal softtabstop=2
-	autocmd Filetype javascript setlocal tabstop=2
 augroup END
 
-augroup filetype_mail
+augroup config
 	autocmd!
-	autocmd Filetype mail setlocal spell
-	autocmd Filetype mail setlocal spelllang=en_gb
+	autocmd InsertEnter * set norelativenumber
+	autocmd InsertLeave * set relativenumber
 augroup END
 
-augroup filetype_markdown
+augroup filetypes
 	autocmd!
-	autocmd Filetype markdown setlocal spell
-	autocmd Filetype markdown setlocal spelllang=en_gb
-augroup END
-
-augroup filetype_python
-	autocmd!
-	autocmd Filetype python setlocal expandtab
-	autocmd Filetype python setlocal shiftwidth=4
-	autocmd Filetype python setlocal softtabstop=4
-	autocmd Filetype python setlocal tabstop=4
-augroup END
-
-augroup filetype_ruby
-	autocmd!
+	autocmd Filetype css setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+	autocmd Filetype cucumber setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+	autocmd Filetype elixir setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+	autocmd Filetype erlang setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+	autocmd Filetype gitcommit setlocal spell spelllang=en_gb
+	autocmd Filetype html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+	autocmd Filetype javascript setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+	autocmd Filetype mail setlocal spell spelllang=en_gb
+	autocmd Filetype markdown setlocal spell spelllang=en_gb
+	autocmd Filetype python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
 	autocmd FileType ruby compiler ruby
-	autocmd Filetype ruby,eruby setlocal expandtab
-	autocmd Filetype ruby,eruby setlocal shiftwidth=2
-	autocmd Filetype ruby,eruby setlocal softtabstop=2
-	autocmd Filetype ruby,eruby setlocal tabstop=2
-augroup END
-
-augroup filetype_scss
-	autocmd!
-	autocmd Filetype scss setlocal expandtab
-	autocmd Filetype scss setlocal shiftwidth=2
-	autocmd Filetype scss setlocal softtabstop=2
-	autocmd Filetype scss setlocal tabstop=2
-augroup END
-
-augroup filetype_tex
-	autocmd!
-	autocmd Filetype tex setlocal expandtab
-	autocmd Filetype tex setlocal shiftwidth=2
-	autocmd Filetype tex setlocal softtabstop=2
-	autocmd Filetype tex setlocal spell
-	autocmd Filetype tex setlocal spelllang=en_gb
-	autocmd Filetype tex setlocal tabstop=2
-	autocmd Filetype tex setlocal textwidth=80
-augroup END
-
-augroup filetype_text
-	autocmd!
-	autocmd Filetype text setlocal spell
-	autocmd Filetype text setlocal spelllang=en_gb
-augroup END
-
-augroup filetype_yaml
-	autocmd!
-	autocmd Filetype yaml setlocal expandtab
-	autocmd Filetype yaml setlocal shiftwidth=2
-	autocmd Filetype yaml setlocal softtabstop=2
-	autocmd Filetype yaml setlocal tabstop=2
+	autocmd Filetype ruby,eruby setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+	autocmd Filetype scss setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+	autocmd Filetype tex setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2 textwidth=80
+	autocmd Filetype tex setlocal spell spelllang=en_gb
+	autocmd Filetype text setlocal spell spelllang=en_gb
+	autocmd Filetype yaml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 augroup END
 
 color dracula
