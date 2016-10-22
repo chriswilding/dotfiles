@@ -73,10 +73,19 @@ augroup END
 
 augroup filetype_javascript
 	autocmd!
+	autocmd FileType javascript iabbrev cont context('', () => {<CR>});<Esc>k0f'a
+	autocmd FileType javascript iabbrev desc describe('', () => {<CR>});<Esc>k0f'a
+	autocmd FileType javascript iabbrev it it('', () => {<CR>});<Esc>k0f'a
 	autocmd Filetype javascript setlocal expandtab
 	autocmd Filetype javascript setlocal shiftwidth=2
 	autocmd Filetype javascript setlocal softtabstop=2
 	autocmd Filetype javascript setlocal tabstop=2
+augroup END
+
+augroup filetype_mail
+	autocmd!
+	autocmd Filetype mail setlocal spell
+	autocmd Filetype mail setlocal spelllang=en_gb
 augroup END
 
 augroup filetype_markdown
