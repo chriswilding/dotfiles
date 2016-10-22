@@ -1,6 +1,5 @@
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
-Plug 'bronson/vim-trailing-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dracula/vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -8,24 +7,13 @@ Plug 'rizzatti/dash.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
-Plug 'ternjs/tern_for_vim'
-Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-obsession'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
@@ -85,7 +73,6 @@ augroup END
 
 augroup filetype_javascript
 	autocmd!
-	autocmd Filetype javascript map <C-]> :TernDef<CR>
 	autocmd Filetype javascript setlocal expandtab
 	autocmd Filetype javascript setlocal shiftwidth=2
 	autocmd Filetype javascript setlocal softtabstop=2
@@ -212,3 +199,11 @@ function! FormatJSON()
 endfunction
 
 command! FormatJSON call FormatJSON()
+
+function! TrimWhitespace()
+	let pos = getpos(".")
+	%s/\s*$//
+	call setpos('.', pos)
+endfunction
+
+command! TrimWhitespace call TrimWhitespace()
