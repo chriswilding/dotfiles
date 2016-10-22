@@ -3,7 +3,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dracula/vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'rizzatti/dash.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
@@ -72,7 +71,6 @@ let g:ctrlp_working_path_mode = 0
 let mapleader=","
 
 map <C-n> :NERDTreeToggle<CR>
-map <leader>d :Dash<CR>
 map <leader>n :NERDTreeFind<CR>
 
 nnoremap j gj
