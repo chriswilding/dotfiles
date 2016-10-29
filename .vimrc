@@ -51,11 +51,13 @@ let mapleader=","
 
 map <C-n> :NERDTreeToggle<CR>
 map <leader>n :NERDTreeFind<CR>
+map Q gq
 
+nnoremap <S-Tab> :bprevious<CR>
+nnoremap <Tab> :bnext<CR>
+nnoremap Y y$
 nnoremap j gj
 nnoremap k gk
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
 
 set background=dark
 set clipboard=unnamed
@@ -76,6 +78,7 @@ set omnifunc=syntaxcomplete#Complete
 set path+=**
 set relativenumber
 set scrolloff=5
+set showcmd
 set showmatch
 set smartcase
 set spellfile=$HOME/Development/dotfiles/spellfile.utf-8.add
