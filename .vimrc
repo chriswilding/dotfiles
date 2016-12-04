@@ -1,24 +1,3 @@
-call plug#begin()
-Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'dracula/vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-rbenv'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rsi'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-vinegar'
-Plug 'vim-airline/vim-airline'
-call plug#end()
-
 augroup abbrev
 	autocmd!
 	autocmd FileType javascript iabbrev cont context('', () => {<CR>});<Esc>k0f'a

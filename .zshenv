@@ -4,13 +4,14 @@ export MANPATH="/usr/local/man:$MANPATH"
 # bin
 export PATH="$HOME/bin:$PATH"
 
+# iterm2
+test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
+
 # LaTeX
 export PATH="/usr/local/texlive/2016basic/bin/x86_64-darwin:$PATH"
 
-# Node
-export PATH="$PATH:./node_modules/.bin/"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# nodeenv
+eval "$(nodenv init -)"
 
 # Ruby
 export PATH="$HOME/.rbenv/bin:$PATH"

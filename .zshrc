@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler gem git mix nvm sudo tmux vi-mode web-search)
+plugins=(bundler gem git mix sudo tmux vi-mode web-search)
 
 # User configuration
 export ZSH_TMUX_AUTOSTART="true"
@@ -87,27 +87,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# aliases
-alias vim-plugin-update-all="cd ~/Development/dotfiles && git submodule update --remote --merge && popd &> /dev/null"
-
-function vim-plugin-add {
-	cd $HOME/Development/dotfiles/.vim/pack/plugins/start;
-	git submodule add $1;
-	popd;
-}
-
-function vim-plugin-delete {
-	cd $HOME/Development/dotfiles/.vim/pack/plugins/start;
-	git submodule deinit $1;
-	rm -rf $1;
-	popd;
-}
-
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
-
-# iterm2
-test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
 # manpager
 export MANPAGER="/bin/sh -c \"col -b | vim -Nu NONE -c 'runtime macros/less.vim' -c 'setf man' -\""
@@ -119,5 +100,3 @@ bindkey '^?' backward-delete-char
 bindkey '^[[3~' delete-char
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 bindkey -M viins 'jk' vi-cmd-mode
-
-
