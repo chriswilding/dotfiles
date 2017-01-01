@@ -87,6 +87,9 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# fzf
+export FZF_DEFAULT_OPTS="-i"
+
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
