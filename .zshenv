@@ -14,9 +14,12 @@ test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_int
 # LaTeX
 export PATH="/usr/local/texlive/2016basic/bin/x86_64-darwin:$PATH"
 
-# nodeenv
+# nodenv
 eval "$(nodenv init -)"
 
 # Ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Scala
+export PATH="$HOME/scala-2.12.1/bin:$PATH"

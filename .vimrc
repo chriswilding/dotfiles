@@ -10,7 +10,6 @@ autocmd Filetype elixir setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype erlang setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype gitcommit setlocal spell spelllang=en_gb
 autocmd Filetype html setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
-autocmd Filetype javascript setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd Filetype mail setlocal spell spelllang=en_gb
 autocmd Filetype markdown setlocal spell spelllang=en_gb
 autocmd Filetype python setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
@@ -31,8 +30,8 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 inoremap jk <esc>
 
 let NERDTreeShowHidden = 1
-let g:EditorConfig_core_mode = "external_command"
-let g:EditorConfig_max_line_indicator = "line"
+let g:EditorConfig_core_mode = 'external_command'
+let g:EditorConfig_max_line_indicator = 'line'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_match_window = 'bottom,order:ttb'
@@ -40,7 +39,7 @@ let g:ctrlp_switch_buffer = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore .git -g ""'
 let g:ctrlp_working_path_mode = 0
 let g:go_fmt_autosave = 1
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = 'goimports'
 let g:go_fmt_fail_silently = 0
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_fields = 1
@@ -48,7 +47,7 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_types = 1
-let mapleader = ","
+let mapleader = ','
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> :FZF<CR>
