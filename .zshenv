@@ -5,8 +5,8 @@ export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$HOME/bin:$PATH"
 
 # Go
-export PATH="/usr/local/go/bin:$PATH"
 export GOPATH="$HOME/Development/go"
+export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
 
 # iterm2
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
