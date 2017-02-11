@@ -1,6 +1,9 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export MANPATH="/usr/local/man:$MANPATH"
 
+# asdf
+source $HOME/.asdf/asdf.sh
+
 # bin
 export PATH="$HOME/bin:$PATH"
 
