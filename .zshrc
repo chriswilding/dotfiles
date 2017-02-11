@@ -86,6 +86,15 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias weather="curl wttr.in/Leeds"
+
+# vi-mode plugin
+bindkey '\033[1~' beginning-of-line
+bindkey '\033[4~' end-of-line
+bindkey '^?' backward-delete-char
+bindkey '^[[3~' delete-char
+bindkey -M menuselect '^[[Z' reverse-menu-complete
+bindkey -M viins 'jk' vi-cmd-mode
 
 # fzf
 export FZF_DEFAULT_OPTS="-i"
@@ -96,10 +105,3 @@ export HOMEBREW_NO_ANALYTICS=1
 # manpager
 export MANPAGER="/bin/sh -c \"col -b | vim -Nu NONE -c 'runtime macros/less.vim' -c 'setf man' -\""
 
-# vi-mode plugin
-bindkey '\033[1~' beginning-of-line
-bindkey '\033[4~' end-of-line
-bindkey '^?' backward-delete-char
-bindkey '^[[3~' delete-char
-bindkey -M menuselect '^[[Z' reverse-menu-complete
-bindkey -M viins 'jk' vi-cmd-mode
