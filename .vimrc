@@ -39,6 +39,7 @@ set completeopt-=preview
 set cursorline
 set diffopt=vertical
 set directory=/tmp//
+set encoding=utf-8
 set guioptions=M
 set hidden
 set hlsearch
