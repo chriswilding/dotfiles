@@ -11,7 +11,10 @@ trim_trailing_whitespace = true
 [Makefile]
 indent_style = tab
 
-[*.py]
-indent_style = space
+[{*.erl,py}]
 indent_size = 4
+indent_style = space
 
+[*.go]
+indent_size = 8
+indent_style = tab
