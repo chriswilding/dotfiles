@@ -20,6 +20,10 @@ export PATH="/usr/local/texlive/2016basic/bin/x86_64-darwin:$PATH"
 # nodenv
 eval "$(nodenv init -)"
 
+# Python
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+
 # Ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"

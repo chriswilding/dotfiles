@@ -104,4 +104,3 @@ export HOMEBREW_NO_ANALYTICS=1
 
 # manpager
 export MANPAGER="/bin/sh -c \"col -b | vim -Nu NONE -c 'runtime macros/less.vim' -c 'setf man' -\""
-

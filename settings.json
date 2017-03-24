@@ -1,10 +1,17 @@
 // Place your settings in this file to overwrite the default settings
 {
+
+      // Controls if the editor should allow to move selections via drag and drop.
+    "editor.dragAndDrop": true,
+
     // Controls the font family.
-    "editor.fontFamily": "Source Code Pro",
+    "editor.fontFamily": "mononoki",
 
     // Controls the font size in pixels.
-    "editor.fontSize": 13,
+    "editor.fontSize": 14,
+
+    // Controls if the minimap is shown
+    "editor.minimap.enabled": true,
 
     // Columns at which to show vertical rulers
     "editor.rulers": [80, 120],
@@ -17,6 +24,9 @@
 
     // Controls whether the editor should render indent guides
     "editor.renderIndentGuides": true,
+
+    // Controls how the editor should render whitespace characters, possibilities are 'none', 'boundary', and 'all'. The 'boundary' option does not render single spaces between words.
+    "editor.renderWhitespace": "all",
 
     // Automatically update extensions
     "extensions.autoUpdate": true,
