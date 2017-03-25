@@ -70,7 +70,7 @@ else
 endif
 
 function! FormatJSON()
-	execute "%!" . "python -m json.tool"
+	execute "%!" . "jq ."
 endfunction
 
 command! FormatJSON call FormatJSON()
