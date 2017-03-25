@@ -1,26 +1,19 @@
 // Place your settings in this file to overwrite the default settings
 {
-
-      // Controls if the editor should allow to move selections via drag and drop.
+    // Controls if the editor should allow to move selections via drag and drop.
     "editor.dragAndDrop": true,
 
     // Controls the font family.
-    "editor.fontFamily": "mononoki",
+    "editor.fontFamily": "Fira Code",
+
+    // Enables font ligatures
+    "editor.fontLigatures": true,
 
     // Controls the font size in pixels.
-    "editor.fontSize": 14,
+    "editor.fontSize": 13,
 
     // Controls if the minimap is shown
     "editor.minimap.enabled": true,
-
-    // Columns at which to show vertical rulers
-    "editor.rulers": [80, 120],
-
-    // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
-    "editor.tabSize": 2,
-
-    // Controls whether the editor should render whitespace characters
-    "editor.renderWhitespace": "boundary",
 
     // Controls whether the editor should render indent guides
     "editor.renderIndentGuides": true,
@@ -28,22 +21,31 @@
     // Controls how the editor should render whitespace characters, possibilities are 'none', 'boundary', and 'all'. The 'boundary' option does not render single spaces between words.
     "editor.renderWhitespace": "all",
 
+    // Columns at which to show vertical rulers
+    "editor.rulers": [80, 120],
+
+    // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
+    "editor.tabSize": 2,
+
     // Automatically update extensions
     "extensions.autoUpdate": true,
-
-    // When enabled, will trim trailing whitespace when you save a file.
-    "files.trimTrailingWhitespace": true,
 
     // Controls auto save of dirty files. Accepted values:  "off", "afterDelay", "onFocusChange" (editor loses focus), "onWindowChange" (window loses focus). If set to "afterDelay", you can configure the delay in "files.autoSaveDelay".
     "files.autoSave": "onFocusChange",
 
-    // Customizes which terminal application to run on OS X.
-    "terminal.external.osxExec": "iTerm.app",
+    // When enabled, insert a final new line at the end of the file when saving it.
+    "files.insertFinalNewline": false,
+
+    // When enabled, will trim trailing whitespace when you save a file.
+    "files.trimTrailingWhitespace": true,
 
     // Enable usage data and errors to be sent to Microsoft.
     "telemetry.enableTelemetry": false,
 
     // Enable crash reports to be sent to Microsoft.
     // This option requires restart to take effect.
-    "telemetry.enableCrashReporter": false
+    "telemetry.enableCrashReporter": false,
+
+    // Customizes which terminal application to run on OS X.
+    "terminal.external.osxExec": "iTerm.app"
 }
