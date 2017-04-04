@@ -11,6 +11,9 @@ export PATH="$HOME/bin:$PATH"
 export GOPATH="$HOME/Development/go"
 export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
 
+# GPG2
+export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
+
 # iterm2
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
