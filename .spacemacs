@@ -320,7 +320,6 @@ you should place your code here."
   (global-set-key [mouse-4] 'scroll-down-line)
   (global-set-key [mouse-5] 'scroll-up-line)
   (global-set-key [select] 'end-of-line)
-  (setq shell-file-name "/bin/sh")
   (setq-default evil-escape-key-sequence "jk")
   )
 
