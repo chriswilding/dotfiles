@@ -61,6 +61,7 @@ set spell spelllang=en_gb
 set spellfile=$HOME/Development/dotfiles/spellfile.utf-8.add
 set termguicolors
 set ttymouse=xterm2
+set ttyfast
 
 if exists('$TMUX')
 	let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
