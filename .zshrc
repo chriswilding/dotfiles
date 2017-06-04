@@ -87,7 +87,14 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias e="emacsclient -t"
-alias weather="curl wttr.in/Leeds"
+
+weather() {
+  local location="Manchester"
+  if [[ -n $1 ]]; then
+    local location=$1
+  fi
+  curl "http://wttr.in/${location}"
+}
 
 # vi-mode plugin
 bindkey '\033[1~' beginning-of-line
