@@ -11,8 +11,6 @@ let g:EditorConfig_core_mode = 'external_command'
 let g:EditorConfig_max_line_indicator = 'line'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:ale_echo_msg_error_str = '✗'
-let g:ale_echo_msg_warning_str = '⚠'
 let g:go_fmt_autosave = 1
 let g:go_fmt_command = 'goimports'
 let g:go_fmt_fail_silently = 0
@@ -30,10 +28,6 @@ map <leader>n :NERDTreeFind<CR>
 map Q gq
 
 nnoremap / /\v
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap Y y$
