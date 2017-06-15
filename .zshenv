@@ -1,9 +1,6 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export MANPATH="/usr/local/man:$MANPATH"
 
-# asdf
-source $HOME/.asdf/asdf.sh
-
 # bin
 export PATH="$HOME/bin:$PATH"
 
@@ -21,6 +18,7 @@ test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_int
 export PATH="/usr/local/texlive/2016basic/bin/x86_64-darwin:$PATH"
 
 # nodenv
+export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
 # Python
