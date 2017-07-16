@@ -67,9 +67,9 @@ fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR="vim"
+  export EDITOR="nvim"
 else
-  export EDITOR="vim"
+  export EDITOR="nvim"
 fi
 
 # Compilation flags
@@ -106,6 +106,7 @@ bindkey -M viins 'jk' vi-cmd-mode
 
 # fzf
 export FZF_DEFAULT_OPTS="-i"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
@@ -147,3 +148,6 @@ eval "$(rbenv init -)"
 
 # Scala
 export PATH="$HOME/scala-2.12.1/bin:$PATH"
+
+# nvim
+alias vim="nvim"
