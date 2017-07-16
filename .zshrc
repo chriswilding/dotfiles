@@ -111,9 +111,6 @@ export FZF_DEFAULT_OPTS="-i"
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
-# manpager
-export MANPAGER="/bin/sh -c \"col -b | vim -Nu NONE -c 'runtime macros/less.vim' -c 'setf man' -\""
-
 # path
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export MANPATH="/usr/local/man:$MANPATH"
