@@ -82,8 +82,6 @@ nnoremap Y y$
 nnoremap j gj
 nnoremap k gk
 
-set autoindent
-set autoread
 set background=dark
 set clipboard=unnamed
 set complete+=k
@@ -98,7 +96,6 @@ set guioptions=M
 set hidden
 set hlsearch
 set ignorecase
-set incsearch
 set lazyredraw
 set matchpairs+=<:>
 set mouse=a
@@ -108,7 +105,6 @@ set number
 set omnifunc=syntaxcomplete#Complete
 set path+=**
 set relativenumber
-set ruler
 set scrolloff=5
 set shortmess+=I
 set showmatch
