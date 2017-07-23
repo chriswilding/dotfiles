@@ -106,7 +106,9 @@ bindkey -M viins 'jk' vi-cmd-mode
 
 # fzf
 export FZF_DEFAULT_OPTS="-i"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+fi
 
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
