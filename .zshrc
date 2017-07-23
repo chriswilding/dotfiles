@@ -104,6 +104,11 @@ bindkey '^[[3~' delete-char
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 bindkey -M viins 'jk' vi-cmd-mode
 
+# exercism
+if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
+  source ~/.config/exercism/exercism_completion.zsh
+fi
+
 # fzf
 export FZF_DEFAULT_OPTS="-i"
 if [ -f ~/.fzf.zsh ]; then
