@@ -125,15 +125,6 @@ fi
 export GOPATH="$HOME/Development/go"
 export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
 
-# gpg
-export GPG_TTY=$(tty)
-[ -f ~/.gnupg/gpg-agent-info ] && source ~/.gnupg/gpg-agent-info
-if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
-    export GPG_AGENT_INFO
-else
-    eval $(gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf --write-env-file ~/.gnupg/gpg-agent-info)
-fi
-
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
