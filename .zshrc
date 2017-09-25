@@ -52,7 +52,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(bundler gem git mix sudo tmux vi-mode web-search)
 
 # User configuration
-export ZSH_TMUX_AUTOSTART="true"
+export ZSH_TMUX_AUTOSTART="false"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,7 +86,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias e="emacsclient -t"
 
 weather() {
   local location="Manchester"
@@ -104,6 +103,13 @@ bindkey '^[[3~' delete-char
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 bindkey -M viins 'jk' vi-cmd-mode
 
+# path
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export MANPATH="/usr/local/man:$MANPATH"
+
+# bin
+export PATH="$HOME/bin:$PATH"
+
 # exercism
 if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
   source ~/.config/exercism/exercism_completion.zsh
@@ -115,43 +121,36 @@ if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
 fi
 
-# homebrew
-export HOMEBREW_NO_ANALYTICS=1
-
-# path
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export MANPATH="/usr/local/man:$MANPATH"
-
-# bin
-export PATH="$HOME/bin:$PATH"
-
-# Go
+# go
 export GOPATH="$HOME/Development/go"
 export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
 
-# GPG2
-export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
+# gpg
+export GPG_TTY=$(tty)
+[ -f ~/.gnupg/gpg-agent-info ] && source ~/.gnupg/gpg-agent-info
+if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
+    export GPG_AGENT_INFO
+else
+    eval $(gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf --write-env-file ~/.gnupg/gpg-agent-info)
+fi
+
+# homebrew
+export HOMEBREW_NO_ANALYTICS=1
 
 # iterm2
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
-
-# LaTeX
-export PATH="/usr/local/texlive/2016basic/bin/x86_64-darwin:$PATH"
 
 # nodenv
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
-# Python
+# nvim
+alias vim="nvim"
+
+# python
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
-# Ruby
+# ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-# Scala
-export PATH="$HOME/scala-2.12.1/bin:$PATH"
-
-# nvim
-alias vim="nvim"

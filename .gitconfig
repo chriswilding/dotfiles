@@ -5,7 +5,7 @@
 [color]
 	ui = true
 [commit]
-	gpgSign = false
+	gpgSign = true
 [core]
 	autocrlf = input
 	editor = nvim
@@ -38,5 +38,5 @@
 [user]
 	email = hello@chriswilding.co.uk
 	name = Chris Wilding
-	signingKey = 4AED59F0
+	signingKey = C17BE07D86A1F7DD
 	useConfigOnly = true

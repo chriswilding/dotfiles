@@ -1,10 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
-    // Controls if the editor should allow to move selections via drag and drop.
-    "editor.dragAndDrop": true,
-
     // Controls the font family.
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "Source Code Pro",
 
     // Enables font ligatures
     "editor.fontLigatures": true,
@@ -12,32 +9,23 @@
     // Controls the font size in pixels.
     "editor.fontSize": 13,
 
-    // Controls if the minimap is shown
-    "editor.minimap.enabled": true,
-
-    // Controls whether the editor should render indent guides
-    "editor.renderIndentGuides": true,
+    // Insert snippets when their prefix matches. Works best when 'quickSuggestions' aren't enabled.
+    "editor.tabCompletion": true,
 
     // Controls how the editor should render whitespace characters, possibilities are 'none', 'boundary', and 'all'. The 'boundary' option does not render single spaces between words.
     "editor.renderWhitespace": "all",
-
-    // Columns at which to show vertical rulers
-    "editor.rulers": [80, 120],
-
-    // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
-    "editor.tabSize": 2,
-
-    // Automatically update extensions
-    "extensions.autoUpdate": true,
 
     // Controls auto save of dirty files. Accepted values:  "off", "afterDelay", "onFocusChange" (editor loses focus), "onWindowChange" (window loses focus). If set to "afterDelay", you can configure the delay in "files.autoSaveDelay".
     "files.autoSave": "onFocusChange",
 
     // When enabled, insert a final new line at the end of the file when saving it.
-    "files.insertFinalNewline": false,
+    "files.insertFinalNewline": true,
 
     // When enabled, will trim trailing whitespace when you save a file.
     "files.trimTrailingWhitespace": true,
+
+    // Enables commit signing with GPG.
+    "git.enableCommitSigning": false,
 
     // Enable usage data and errors to be sent to Microsoft.
     "telemetry.enableTelemetry": false,
@@ -47,5 +35,17 @@
     "telemetry.enableCrashReporter": false,
 
     // Customizes which terminal application to run on OS X.
-    "terminal.external.osxExec": "iTerm.app"
+    "terminal.external.osxExec": "iTerm.app",
+
+    // Controls the font family of the terminal, this defaults to editor.fontFamily's value.
+    "terminal.integrated.fontFamily": "Source Code Pro",
+
+    // Controls whether font ligatures are enabled in the terminal.
+    "terminal.integrated.fontLigatures": true,
+
+    // Controls the font size in pixels of the terminal.
+    "terminal.integrated.fontSize": 13,
+
+    // Specifies the color theme used in the workbench.
+    "workbench.colorTheme": "Dracula"
 }
