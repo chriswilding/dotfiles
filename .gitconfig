@@ -18,6 +18,8 @@
 	compactionHeuristic = true
 [fetch]
 	prune = true
+[gpg]
+	program = gpg
 [grep]
 	threads = 8
 [init]

@@ -128,20 +128,18 @@ export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
-# iterm2
-test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
-
-# nodenv
-export PATH="$HOME/.nodenv/bin:$PATH"
+# node
 eval "$(nodenv init -)"
 
 # nvim
 alias vim="nvim"
 
 # python
-export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # ruby
-export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# visual studio code
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
