@@ -46,6 +46,12 @@
     // Specifies the color theme used in the workbench.
     "workbench.colorTheme": "Dracula",
 
+    // Controls font aliasing method in the workbench.
+    // - default: Sub-pixel font smoothing. On most non-retina displays this will give the sharpest text
+    // - antialiased: Smooth the font on the level of the pixel, as opposed to the subpixel. Can make the font appear lighter overall
+    // - none: Disables font smoothing. Text will show with jagged sharp edges
+    "workbench.fontAliasing": "antialiased",
+
     // Enables macOS Sierra window tabs. Note that changes require a full restart to apply and that native tabs will disable a custom title bar style if configured.
     "window.nativeTabs": true
 }
