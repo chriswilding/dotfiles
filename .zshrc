@@ -128,8 +128,12 @@ export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
+# latex
+export PATH="/usr/local/texlive/2017basic/bin/x86_64-darwin:$PATH"
+
 # node
-eval "$(nodenv init -)"
+export NVM_DIR="$HOME/.nvm"
+source "/usr/local/opt/nvm/nvm.sh"
 
 # nvim
 alias vim="nvim"
