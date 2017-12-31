@@ -1,10 +1,10 @@
 // Place your settings in this file to overwrite the default settings
 {
     // Controls the font family.
-    "editor.fontFamily": "Source Code Pro",
+    "editor.fontFamily": "mononoki",
 
     // Controls the font size in pixels.
-    "editor.fontSize": 13,
+    "editor.fontSize": 14,
 
     // Insert snippets when their prefix matches. Works best when 'quickSuggestions' aren't enabled.
     "editor.tabCompletion": true,
@@ -35,10 +35,10 @@
     "terminal.external.osxExec": "iTerm.app",
 
     // Controls the font family of the terminal, this defaults to editor.fontFamily's value.
-    "terminal.integrated.fontFamily": "Source Code Pro",
+    "terminal.integrated.fontFamily": "mononoki",
 
     // Controls the font size in pixels of the terminal.
-    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontSize": 14,
 
     // The path of the shell that the terminal uses on OS X.
     "terminal.integrated.shell.osx": "/bin/zsh",
