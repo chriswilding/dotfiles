@@ -131,6 +131,9 @@ export HOMEBREW_NO_ANALYTICS=1
 # latex
 export PATH="/usr/local/texlive/2017basic/bin/x86_64-darwin:$PATH"
 
+# less
+export LESS="-FRX"
+
 # node
 export NVM_DIR="$HOME/.nvm"
 source "/usr/local/opt/nvm/nvm.sh"
@@ -147,3 +150,6 @@ eval "$(rbenv init -)"
 
 # visual studio code
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+
+# added by travis gem
+# [ -f /Users/chris/.travis/travis.sh ] && source /Users/chris/.travis/travis.sh
