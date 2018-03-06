@@ -12,13 +12,13 @@
     // Controls how the editor should render whitespace characters, possibilities are 'none', 'boundary', and 'all'. The 'boundary' option does not render single spaces between words.
     "editor.renderWhitespace": "all",
 
-    // Controls auto save of dirty files. Accepted values:  "off", "afterDelay", "onFocusChange" (editor loses focus), "onWindowChange" (window loses focus). If set to "afterDelay", you can configure the delay in "files.autoSaveDelay".
+    // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
     "files.autoSave": "onFocusChange",
 
     // When enabled, insert a final new line at the end of the file when saving it.
     "files.insertFinalNewline": true,
 
-    // When enabled, will trim trailing whitespace when you save a file.
+    // When enabled, will trim trailing whitespace when saving a file.
     "files.trimTrailingWhitespace": true,
 
     // Enables commit signing with GPG.
@@ -34,9 +34,6 @@
     // Customizes which terminal application to run on OS X.
     "terminal.external.osxExec": "iTerm.app",
 
-    // Controls the font family of the terminal, this defaults to editor.fontFamily's value.
-    "terminal.integrated.fontFamily": "mononoki",
-
     // Controls the font size in pixels of the terminal.
     "terminal.integrated.fontSize": 14,
 
@@ -50,8 +47,22 @@
     // - default: Sub-pixel font smoothing. On most non-retina displays this will give the sharpest text
     // - antialiased: Smooth the font on the level of the pixel, as opposed to the subpixel. Can make the font appear lighter overall
     // - none: Disables font smoothing. Text will show with jagged sharp edges
+    // - auto: Applies `default` or `antialiased` automatically based on the DPI of displays.
     "workbench.fontAliasing": "antialiased",
 
     // Enables macOS Sierra window tabs. Note that changes require a full restart to apply and that native tabs will disable a custom title bar style if configured.
-    "window.nativeTabs": true
+    "window.nativeTabs": true,
+
+    // Controls if folders should open in a new window or replace the last active window.
+    // - default: folders will open in a new window unless a folder is picked from within the application (e.g. via the File menu)
+    // - on: folders will open in a new window
+    // - off: folders will replace the last active window
+    // Note that there can still be cases where this setting is ignored (e.g. when using the -new-window or -reuse-window command line option).
+    "window.openFoldersInNewWindow": "on",
+
+    // Controls which editor is shown at startup, if none is restored from the previous session. Select 'none' to start without an editor, 'welcomePage' to open the Welcome page (default), 'newUntitledFile' to open a new untitled file (only opening an empty workspace).
+    "workbench.startupEditor": "newUntitledFile",
+
+    // Controls the visibility of the Twitter feedback (smiley) in the status bar at the bottom of the workbench.
+    "workbench.statusBar.feedback.visible": false
 }
