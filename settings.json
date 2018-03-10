@@ -48,7 +48,7 @@
     // - antialiased: Smooth the font on the level of the pixel, as opposed to the subpixel. Can make the font appear lighter overall
     // - none: Disables font smoothing. Text will show with jagged sharp edges
     // - auto: Applies `default` or `antialiased` automatically based on the DPI of displays.
-    "workbench.fontAliasing": "antialiased",
+    "workbench.fontAliasing": "auto",
 
     // Enables macOS Sierra window tabs. Note that changes require a full restart to apply and that native tabs will disable a custom title bar style if configured.
     "window.nativeTabs": true,
