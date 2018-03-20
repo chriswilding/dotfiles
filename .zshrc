@@ -148,8 +148,10 @@ eval "$(pyenv virtualenv-init -)"
 # ruby
 eval "$(rbenv init -)"
 
+# travis
+if [ -f ~/.travis/travis.sh ]; then
+  source ~/.travis/travis.sh
+fi
+
 # visual studio code
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-
-# added by travis gem
-# [ -f /Users/chris/.travis/travis.sh ] && source /Users/chris/.travis/travis.sh
