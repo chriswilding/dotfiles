@@ -2,7 +2,7 @@ call plug#begin('~/.local/share/nvim/plug')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'dracula/vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'jremmen/vim-ripgrep'
@@ -92,7 +92,6 @@ nnoremap Y y$
 nnoremap j gj
 nnoremap k gk
 
-set background=dark
 set clipboard=unnamed
 set complete+=k
 set completeopt-=preview
