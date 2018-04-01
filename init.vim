@@ -77,8 +77,8 @@ let g:go_highlight_space_tab_error = 0
 let g:go_highlight_structs = 1
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_types = 1
-let g:go_list_type = "quickfix"
-let mapleader=','
+let g:go_list_type = 'quickfix'
+let mapleader = ','
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> :FZF<CR>
@@ -132,13 +132,13 @@ vmap < <gv
 vmap > >gv
 
 function! FormatJSON()
-	execute "%!" . "jq ."
+	execute '%!' . 'jq .'
 endfunction
 
 command! FormatJSON call FormatJSON()
 
 function! Trim()
-	let pos = getpos(".")
+	let pos = getpos('.')
 	%s/\s*$//
 	call setpos('.', pos)
 endfunction
