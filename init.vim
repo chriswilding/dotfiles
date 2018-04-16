@@ -48,6 +48,9 @@ command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <ar
 command! -bang Q quit<bang>
 command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 
+highlight htmlArg cterm=italic
+highlight link xmlEndTag xmlTag
+
 inoremap jk <esc>
 
 let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
@@ -62,6 +65,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
 let g:deoplete#enable_at_startup = 1
+let g:dracula_bold = 1
+let g:dracula_colorterm = 1
+let g:dracula_inverse = 1
+let g:dracula_italic = 1
+let g:dracula_undercurl = 1
+let g:dracula_underline = 1
 let g:go_fmt_autosave = 1
 let g:go_fmt_command = 'goimports'
 let g:go_fmt_fail_silently = 1
