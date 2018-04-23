@@ -57,7 +57,6 @@ let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --follow --glob "!.g
 let NERDTreeShowHidden = 1
 let g:EditorConfig_core_mode = 'external_command'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
-let g:EditorConfig_max_line_indicator = 'line'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
