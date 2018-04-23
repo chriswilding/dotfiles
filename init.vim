@@ -140,13 +140,13 @@ vnoremap / /\v
 vmap < <gv
 vmap > >gv
 
-function! FormatJSON()
+function! FormatJSON() abort
 	execute '%!' . 'jq .'
 endfunction
 
 command! FormatJSON call FormatJSON()
 
-function! Trim()
+function! Trim() abort
 	let pos = getpos('.')
 	%s/\s*$//
 	call setpos('.', pos)
