@@ -45,14 +45,17 @@ Plug 'w0rp/ale'
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 call plug#end()
 
+augroup Highlight
+  autocmd!
+
+  autocmd ColorScheme * highlight link xmlEndTag xmlTag
+augroup END
+
 color dracula
 
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 command! -bang Q quit<bang>
 command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
-
-highlight htmlArg cterm=italic
-highlight link xmlEndTag xmlTag
 
 inoremap jk <esc>
 
