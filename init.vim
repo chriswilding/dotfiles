@@ -101,8 +101,6 @@ set completeopt-=preview
 set cursorline
 set diffopt=vertical
 set directory=/tmp//
-set encoding=utf-8
-set gdefault
 set grepprg=rg\ --vimgrep
 set guioptions=M
 set hidden
