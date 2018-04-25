@@ -1,5 +1,4 @@
 call plug#begin('~/.local/share/nvim/plug')
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -13,6 +12,7 @@ Plug 'prettier/vim-prettier', {
   \ 'for': [ 'css', 'graphql', 'javascript', 'json', 'less', 'markdown', 'scss', 'typescript', 'vue' ] }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'sheerun/vim-polyglot'
+Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
@@ -57,9 +57,14 @@ command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <ar
 command! -bang Q quit<bang>
 command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 
+if executable('rg')
+  let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
+  set grepprg=rg\ --vimgrep
+endif
+
 inoremap jk <esc>
 
-let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 let NERDTreeShowHidden = 1
 let g:EditorConfig_core_mode = 'external_command'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
@@ -101,7 +106,6 @@ set completeopt-=preview
 set cursorline
 set diffopt=vertical
 set directory=/tmp//
-set grepprg=rg\ --vimgrep
 set guioptions=M
 set hidden
 set hlsearch
@@ -133,7 +137,11 @@ vmap < <gv
 vmap > >gv
 
 function! FormatJSON() abort
-	execute '%!' . 'jq .'
+  if executable('jq')
+    execute '%!' . 'jq .'
+  else
+    echoerr 'jq is required to format json'
+  endif
 endfunction
 
 command! FormatJSON call FormatJSON()
