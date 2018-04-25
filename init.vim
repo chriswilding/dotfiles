@@ -3,10 +3,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'pbogut/deoplete-elm'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': [ 'css', 'graphql', 'javascript', 'json', 'less', 'markdown', 'scss', 'typescript', 'vue' ] }
@@ -86,6 +88,7 @@ let g:go_highlight_structs = 1
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_types = 1
 let g:go_list_type = 'quickfix'
+let g:polyglot_disabled = ['elm']
 let mapleader = ','
 
 map <C-n> :NERDTreeToggle<CR>
