@@ -125,6 +125,11 @@ fi
 export GOPATH="$HOME/Development/go"
 export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
 
+# gpg
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
