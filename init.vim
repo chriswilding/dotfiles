@@ -3,11 +3,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'mhinz/vim-mix-format'
 Plug 'pbogut/deoplete-elm'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
@@ -81,6 +83,7 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_generate_tags = 1
+let g:mix_format_on_save = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_space_tab_error = 0
@@ -88,7 +91,7 @@ let g:go_highlight_structs = 1
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_types = 1
 let g:go_list_type = 'quickfix'
-let g:polyglot_disabled = ['elm']
+let g:polyglot_disabled = ['elixir', 'elm', 'erlang', 'go']
 let mapleader = ','
 
 map <C-n> :NERDTreeToggle<CR>
