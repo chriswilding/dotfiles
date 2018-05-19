@@ -1,11 +1,11 @@
 call plug#begin('~/.local/share/nvim/plug')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'jdkanani/vim-material-theme'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -37,6 +37,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-erlang/erlang-motions.vim'
 Plug 'vim-erlang/vim-dialyzer'
 Plug 'vim-erlang/vim-erlang-compiler'
@@ -55,7 +56,7 @@ augroup Highlight
   autocmd ColorScheme * highlight link xmlEndTag xmlTag
 augroup END
 
-color dracula
+colorscheme material-theme
 
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 command! -bang Q quit<bang>
@@ -75,6 +76,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_skip_empty_sections = 1
+let g:airline_theme='hybrid'
 let g:deoplete#enable_at_startup = 1
 let g:go_fmt_command = 'goimports'
 let g:go_highlight_array_whitespace_error = 0
@@ -83,8 +85,8 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_generate_tags = 1
-let g:mix_format_on_save = 1
 let g:go_highlight_methods = 1
+let g:mix_format_on_save = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_space_tab_error = 0
 let g:go_highlight_structs = 1
@@ -106,6 +108,7 @@ nnoremap Y y$
 nnoremap j gj
 nnoremap k gk
 
+set background=dark
 set clipboard=unnamed
 set complete+=k
 set completeopt-=preview

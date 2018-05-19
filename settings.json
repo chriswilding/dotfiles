@@ -41,7 +41,10 @@
     "terminal.integrated.shell.osx": "/bin/zsh",
 
     // Specifies the color theme used in the workbench.
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Material Theme",
+
+    // Specifies the icon theme used in the workbench or 'null' to not show any file icons.
+    "workbench.iconTheme": "eq-material-theme-icons",
 
     // Controls font aliasing method in the workbench.
     // - default: Sub-pixel font smoothing. On most non-retina displays this will give the sharpest text
