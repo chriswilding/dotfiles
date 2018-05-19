@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler gem git mix sudo tmux vi-mode web-search)
+plugins=(git vi-mode)
 
 # User configuration
 export ZSH_TMUX_AUTOSTART="false"
@@ -66,11 +66,7 @@ fi
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR="nvim"
-else
-  export EDITOR="nvim"
-fi
+export EDITOR="nvim"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -145,13 +141,6 @@ source "/usr/local/opt/nvm/nvm.sh"
 
 # nvim
 alias vim="nvim"
-
-# python
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-# ruby
-eval "$(rbenv init -)"
 
 # travis
 if [ -f ~/.travis/travis.sh ]; then
