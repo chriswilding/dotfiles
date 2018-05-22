@@ -101,8 +101,9 @@ let g:go_highlight_structs = 1
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_types = 1
 let g:go_list_type = 'quickfix'
+let g:jsx_ext_required = 1
 let g:mix_format_on_save = 1
-let g:polyglot_disabled = ['elixir', 'elm', 'erlang', 'go']
+let g:polyglot_disabled = ['elixir', 'elm', 'erlang', 'go', 'html', 'javascript', 'javascript.jsx', 'jsx', 'scss']
 let mapleader = ','
 
 map <C-n> :NERDTreeToggle<CR>
@@ -146,6 +147,7 @@ set spellfile=$HOME/Development/dotfiles/spellfile.utf-8.add
 set termguicolors
 set undodir=/tmp//
 set undofile
+set updatetime=100
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 set wildmode=list:longest,list:full
 
