@@ -77,10 +77,15 @@ inoremap jk <esc>
 let NERDTreeShowHidden = 1
 let g:EditorConfig_core_mode = 'external_command'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_skip_empty_sections = 1
 let g:airline_theme='hybrid'
+let g:ale_fix_on_save = 1
+let g:ale_fixers = { 'javascript': ['eslint'] }
+let g:ale_lint_on_save = 1
+let g:ale_sign_column_always = 1
 let g:deoplete#enable_at_startup = 1
 let g:go_fmt_command = 'goimports'
 let g:go_highlight_array_whitespace_error = 0
