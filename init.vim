@@ -1,6 +1,7 @@
 call plug#begin('~/.local/share/nvim/plug')
 Plug 'airblade/vim-gitgutter'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
@@ -87,6 +88,8 @@ let g:ale_fixers = { 'javascript': ['eslint'] }
 let g:ale_lint_on_save = 1
 let g:ale_sign_column_always = 1
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#ternjs#filetypes = [ 'javascript', 'javascript.jsx', 'jsx' ]
+let g:deoplete#sources#ternjs#types = 1
 let g:go_fmt_command = 'goimports'
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_build_constraints = 1
