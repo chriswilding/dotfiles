@@ -86,13 +86,13 @@ let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_generate_tags = 1
 let g:go_highlight_methods = 1
-let g:mix_format_on_save = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_space_tab_error = 0
 let g:go_highlight_structs = 1
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_types = 1
 let g:go_list_type = 'quickfix'
+let g:mix_format_on_save = 1
 let g:polyglot_disabled = ['elixir', 'elm', 'erlang', 'go']
 let mapleader = ','
 
