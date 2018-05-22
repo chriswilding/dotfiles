@@ -11,10 +11,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-mix-format'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': [ 'javascript', 'json' ] }
 Plug 'mxw/vim-jsx'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': [ 'css', 'graphql', 'javascript', 'json', 'less', 'markdown', 'scss', 'typescript', 'vue' ] }
 Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeFind', 'NERDTreeToggle'] }
 Plug 'sheerun/vim-polyglot'
 Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -88,7 +86,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_skip_empty_sections = 1
 let g:airline_theme='hybrid'
 let g:ale_fix_on_save = 1
-let g:ale_fixers = { 'javascript': ['eslint'] }
+let g:ale_fixers = { 'javascript': ['prettier', 'eslint'] }
 let g:ale_lint_on_save = 1
 let g:ale_sign_column_always = 1
 let g:deoplete#enable_at_startup = 1
@@ -100,6 +98,7 @@ let mapleader = ','
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> :FZF<CR>
 map <leader>b :Buffers<CR>
+map <leader>j p<Esc>gg:s/\n/_/f_gu$:s/\s+$//e:s/\s/-/g<Esc>
 map <leader>n :NERDTreeFind<CR>
 map <leader>p :Buffers<CR>
 map Q gq

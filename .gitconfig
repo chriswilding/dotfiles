@@ -87,7 +87,7 @@ pager = true
 [submodule]
 	fetchJobs = 4
 [user]
-	email = hello@chriswilding.co.uk
+	email = chris.wilding@sainsburys.co.uk
 	name = Chris Wilding
-	signingKey = 17D0D0CF7E2426B2
+	signingKey = 6958F22DBEE06154
 	useConfigOnly = true

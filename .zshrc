@@ -132,12 +132,18 @@ export HOMEBREW_NO_ANALYTICS=1
 # latex
 export PATH="/usr/local/texlive/2017basic/bin/x86_64-darwin:$PATH"
 
+# mysql
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
 # node
 export NVM_DIR="$HOME/.nvm"
 source "/usr/local/opt/nvm/nvm.sh"
 
 # nvim
 alias vim="nvim"
+function vimd {
+  nvim $(git status --porcelain | cut -d " " -f 3)
+}
 
 # travis
 if [ -f ~/.travis/travis.sh ]; then
@@ -146,3 +152,10 @@ fi
 
 # visual studio code
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/chris.wilding/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/chris.wilding/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/chris.wilding/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/chris.wilding/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
