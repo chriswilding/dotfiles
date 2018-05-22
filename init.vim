@@ -1,5 +1,6 @@
 call plug#begin('~/.local/share/nvim/plug')
 Plug 'airblade/vim-gitgutter'
+Plug 'cakebaker/scss-syntax.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
@@ -10,6 +11,9 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-mix-format'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'pbogut/deoplete-elm'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
