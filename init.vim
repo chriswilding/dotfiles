@@ -7,7 +7,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'jdkanani/vim-material-theme'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -41,6 +40,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'trevordmiller/nova-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-erlang/erlang-motions.vim'
@@ -61,7 +61,7 @@ augroup Highlight
   autocmd ColorScheme * highlight link xmlEndTag xmlTag
 augroup END
 
-colorscheme material-theme
+colorscheme nova
 
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 command! -bang Q quit<bang>
