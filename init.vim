@@ -88,7 +88,7 @@ let g:ale_fixers = { 'javascript': ['eslint'] }
 let g:ale_lint_on_save = 1
 let g:ale_sign_column_always = 1
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#ternjs#filetypes = [ 'javascript', 'javascript.jsx', 'jsx' ]
+let g:deoplete#sources#ternjs#filetypes = ['javascript', 'javascript.jsx']
 let g:deoplete#sources#ternjs#types = 1
 let g:go_fmt_command = 'goimports'
 let g:go_highlight_array_whitespace_error = 0
@@ -106,7 +106,7 @@ let g:go_highlight_types = 1
 let g:go_list_type = 'quickfix'
 let g:jsx_ext_required = 1
 let g:mix_format_on_save = 1
-let g:polyglot_disabled = ['elixir', 'elm', 'erlang', 'go', 'html', 'javascript', 'javascript.jsx', 'jsx', 'scss']
+let g:polyglot_disabled = ['elixir', 'elm', 'erlang', 'go', 'html', 'javascript', 'javascript.jsx', 'scss']
 let mapleader = ','
 
 map <C-n> :NERDTreeToggle<CR>
