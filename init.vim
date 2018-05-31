@@ -111,6 +111,7 @@ let mapleader = ','
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> :FZF<CR>
+map <leader>b :Buffers<CR>
 map <leader>n :NERDTreeFind<CR>
 map Q gq
 
