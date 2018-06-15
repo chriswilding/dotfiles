@@ -118,6 +118,8 @@ map Q gq
 nnoremap / /\v
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
+nnoremap <leader>fn :let @+ = expand("%:t")<CR>
+nnoremap <leader>fp :let @+ = expand("%")<CR>
 nnoremap Y y$
 nnoremap j gj
 nnoremap k gk
