@@ -138,6 +138,8 @@ set completeopt-=preview
 set cursorline
 set diffopt=vertical
 set directory=/tmp//
+set foldlevelstart=10
+set foldmethod=syntax
 set guioptions=M
 set hlsearch
 set ignorecase
