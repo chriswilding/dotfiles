@@ -4,33 +4,24 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'elixir-editors/vim-elixir'
-Plug 'elmcast/elm-vim'
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'mhinz/vim-mix-format'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'pbogut/deoplete-elm'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': [ 'css', 'graphql', 'javascript', 'json', 'less', 'markdown', 'scss', 'typescript', 'vue' ] }
 Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeFind', 'NERDTreeToggle'] }
 Plug 'sheerun/vim-polyglot'
 Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'slashmili/alchemist.vim'
-Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-rsi'
@@ -43,16 +34,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'trevordmiller/nova-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-erlang/erlang-motions.vim'
-Plug 'vim-erlang/vim-dialyzer'
-Plug 'vim-erlang/vim-erlang-compiler'
-Plug 'vim-erlang/vim-erlang-omnicomplete'
-Plug 'vim-erlang/vim-erlang-runtime'
-Plug 'vim-erlang/vim-erlang-skeletons'
-Plug 'vim-erlang/vim-erlang-tags'
-Plug 'vim-erlang/vim-rebar'
 Plug 'w0rp/ale'
-Plug 'zchee/deoplete-go', { 'do': 'make' }
 call plug#end()
 
 augroup Highlight
@@ -96,23 +78,8 @@ let g:ale_sign_column_always = 1
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#ternjs#filetypes = ['javascript', 'javascript.jsx']
 let g:deoplete#sources#ternjs#types = 1
-let g:go_fmt_command = 'goimports'
-let g:go_highlight_array_whitespace_error = 0
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_generate_tags = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_space_tab_error = 0
-let g:go_highlight_structs = 1
-let g:go_highlight_trailing_whitespace_error = 0
-let g:go_highlight_types = 1
-let g:go_list_type = 'quickfix'
 let g:jsx_ext_required = 1
-let g:mix_format_on_save = 1
-let g:polyglot_disabled = ['elixir', 'elm', 'erlang', 'go', 'html', 'javascript', 'javascript.jsx', 'scss']
+let g:polyglot_disabled = ['html', 'javascript', 'javascript.jsx', 'scss']
 let mapleader = ','
 
 map <C-n> :NERDTreeToggle<CR>
