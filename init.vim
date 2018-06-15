@@ -61,6 +61,12 @@ augroup Highlight
   autocmd ColorScheme * highlight link xmlEndTag xmlTag
 augroup END
 
+augroup Netrw
+  autocmd!
+
+  autocmd BufWinEnter * if &filetype != 'netrw' | set bufhidden=hide | endif
+augroup END
+
 colorscheme nova
 
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
@@ -133,7 +139,6 @@ set cursorline
 set diffopt=vertical
 set directory=/tmp//
 set guioptions=M
-set hidden
 set hlsearch
 set ignorecase
 set lazyredraw
