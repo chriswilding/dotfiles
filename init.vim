@@ -141,6 +141,7 @@ set directory=/tmp//
 set guioptions=M
 set hlsearch
 set ignorecase
+set inccommand=split
 set lazyredraw
 set matchpairs+=<:>
 set mouse=a
