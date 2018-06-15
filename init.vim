@@ -132,7 +132,7 @@ nnoremap j gj
 nnoremap k gk
 
 set background=dark
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set complete+=k
 set completeopt-=preview
 set cursorline
