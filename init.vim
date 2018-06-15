@@ -168,6 +168,21 @@ vnoremap / /\v
 vmap < <gv
 vmap > >gv
 
+function! CloseOthers() abort
+  let buffer = bufnr('%')
+  let last_buffer = bufnr('$')
+
+  let n = 1
+  while n <= last_buffer
+    if n != buffer && buflisted(n)
+      silent execute 'bdelete ' . n
+    endif
+    let n = n+1
+  endwhile
+endfunction
+
+command! CloseOthers :call CloseOthers()
+
 function! FormatJSON() abort
   if executable('jq')
     execute '%!' . 'jq .'
