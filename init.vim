@@ -78,7 +78,6 @@ let g:ale_sign_column_always = 1
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#ternjs#filetypes = ['javascript', 'javascript.jsx']
 let g:deoplete#sources#ternjs#types = 1
-let g:jsx_ext_required = 1
 let g:polyglot_disabled = ['html', 'javascript', 'javascript.jsx', 'scss']
 let mapleader = ','
 
