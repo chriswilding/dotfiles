@@ -4,9 +4,11 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-editors/vim-elixir'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'mhinz/vim-mix-format'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -16,6 +18,7 @@ Plug 'prettier/vim-prettier', {
 Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeFind', 'NERDTreeToggle'] }
 Plug 'sheerun/vim-polyglot'
 Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
@@ -78,7 +81,9 @@ let g:ale_sign_column_always = 1
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#ternjs#filetypes = ['javascript', 'javascript.jsx']
 let g:deoplete#sources#ternjs#types = 1
-let g:polyglot_disabled = ['html', 'javascript', 'javascript.jsx', 'scss']
+let g:mix_format_on_save = 1
+let g:mix_format_silent_errors = 1
+let g:polyglot_disabled = ['elixir', 'html', 'javascript', 'javascript.jsx', 'scss']
 let mapleader = ','
 
 map <C-n> :NERDTreeToggle<CR>
