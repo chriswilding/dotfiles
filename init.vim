@@ -1,7 +1,7 @@
 call plug#begin('~/.local/share/nvim/plug')
 Plug 'airblade/vim-gitgutter'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
@@ -69,6 +69,11 @@ inoremap jk <esc>
 let NERDTreeShowHidden = 1
 let g:EditorConfig_core_mode = 'external_command'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+let g:LanguageClient_autoStart = 1
+let g:LanguageClient_serverCommands = {
+  \ 'javascript': ['javascript-typescript-stdio'],
+  \ 'javascript.jsx': ['javascript-typescript-stdio'],
+  \ }
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -79,8 +84,6 @@ let g:ale_fixers = { 'javascript': ['eslint'] }
 let g:ale_lint_on_save = 1
 let g:ale_sign_column_always = 1
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#ternjs#filetypes = ['javascript', 'javascript.jsx']
-let g:deoplete#sources#ternjs#types = 1
 let g:mix_format_on_save = 1
 let g:mix_format_silent_errors = 1
 let g:polyglot_disabled = ['elixir', 'html', 'javascript', 'javascript.jsx', 'scss']
@@ -94,10 +97,14 @@ map <leader>p :Buffers<CR>
 map Q gq
 
 nnoremap / /\v
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <leader>fn :let @+ = expand("%:t")<CR>
 nnoremap <leader>fp :let @+ = expand("%")<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap Y y$
 nnoremap j gj
 nnoremap k gk
