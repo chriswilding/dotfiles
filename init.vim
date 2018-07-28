@@ -45,11 +45,20 @@ augroup Highlight
   autocmd ColorScheme * highlight link xmlEndTag xmlTag
 augroup END
 
+augroup JavaScript
+  autocmd!
+
+  autocmd FileType javascript nnoremap <silent> <f2> :call languageclient#textdocument_rename()<cr>
+  autocmd FileType javascript nnoremap <silent> K :call languageclient#textdocument_hover()<cr>
+  autocmd FileType javascript nnoremap <silent> gd :call languageclient#textdocument_definition()<cr>
+augroup END
+
 augroup Netrw
   autocmd!
 
   autocmd BufWinEnter * if &filetype != 'netrw' | set bufhidden=hide | endif
 augroup END
+
 
 colorscheme nova
 
@@ -101,9 +110,6 @@ nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <leader>fn :let @+ = expand("%:t")<CR>
 nnoremap <leader>fp :let @+ = expand("%")<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap Y y$
 nnoremap j gj
 nnoremap k gk
