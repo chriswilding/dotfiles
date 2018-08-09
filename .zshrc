@@ -132,6 +132,9 @@ export HOMEBREW_NO_ANALYTICS=1
 # latex
 export PATH="/usr/local/texlive/2017basic/bin/x86_64-darwin:$PATH"
 
+# less
+unset LESS
+
 # node
 export NVM_DIR="$HOME/.nvm"
 source "/usr/local/opt/nvm/nvm.sh"
