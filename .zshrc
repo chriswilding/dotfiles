@@ -120,6 +120,7 @@ fi
 # go
 export GOPATH="$HOME/Development/go"
 export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
+export GO111MODULE="on"
 
 # gpg
 export GPG_TTY=$(tty)
