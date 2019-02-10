@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
+plugins=(git kubectl vi-mode)
 
 # User configuration
 export ZSH_TMUX_AUTOSTART="false"
@@ -111,16 +111,14 @@ if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
   source ~/.config/exercism/exercism_completion.zsh
 fi
 
+# flyway
+export PATH="$HOME/bin/flyway:$PATH"
+
 # fzf
 export FZF_DEFAULT_OPTS="-i"
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
 fi
-
-# go
-export GOPATH="$HOME/Development/go"
-export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
-export GO111MODULE="on"
 
 # gpg
 export GPG_TTY=$(tty)
@@ -129,6 +127,9 @@ gpgconf --launch gpg-agent
 
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
+
+# java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # latex
 export PATH="/usr/local/texlive/2017basic/bin/x86_64-darwin:$PATH"
@@ -150,3 +151,8 @@ fi
 
 # visual studio code
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+
+# zsh
+fpath=(/usr/local/share/zsh-completions $fpath)
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
