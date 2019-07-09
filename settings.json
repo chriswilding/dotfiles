@@ -7,7 +7,7 @@
     "editor.fontSize": 14,
 
     // Insert snippets when their prefix matches. Works best when 'quickSuggestions' aren't enabled.
-    "editor.tabCompletion": true,
+    "editor.tabCompletion": "on",
 
     // Controls how the editor should render whitespace characters, possibilities are 'none', 'boundary', and 'all'. The 'boundary' option does not render single spaces between words.
     "editor.renderWhitespace": "all",
@@ -60,6 +60,6 @@
     // Controls which editor is shown at startup, if none is restored from the previous session. Select 'none' to start without an editor, 'welcomePage' to open the Welcome page (default), 'newUntitledFile' to open a new untitled file (only opening an empty workspace).
     "workbench.startupEditor": "newUntitledFile",
 
-    // Controls the visibility of the Twitter feedback (smiley) in the status bar at the bottom of the workbench.
-    "workbench.statusBar.feedback.visible": false
+    // Fetches experiments to run from a Microsoft online service.
+    "workbench.enableExperiments": false
 }
