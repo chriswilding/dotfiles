@@ -1,9 +1,7 @@
-[alias]
-	ctags = !.git/hooks/ctags
 [branch]
 	autoSetupMerge = true
 [color]
-pager = true
+  pager = true
 	ui = auto
 	status = auto
 	diff = auto
@@ -71,8 +69,6 @@ pager = true
 	program = gpg
 [grep]
 	threads = 8
-[init]
-	templateDir = ~/.git_template
 [help]
 	autoCorrect = 1
 [push]
