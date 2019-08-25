@@ -66,7 +66,7 @@ fi
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-export EDITOR="nvim"
+export EDITOR="code --wait"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -140,9 +140,6 @@ unset LESS
 # node
 export NVM_DIR="$HOME/.nvm"
 source "/usr/local/opt/nvm/nvm.sh"
-
-# nvim
-alias vim="nvim"
 
 # travis
 if [ -f ~/.travis/travis.sh ]; then
