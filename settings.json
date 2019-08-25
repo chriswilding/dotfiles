@@ -1,10 +1,13 @@
 // Place your settings in this file to overwrite the default settings
 {
     // Controls the font family.
-    "editor.fontFamily": "mononoki",
+    "editor.fontFamily": "FiraCode-Retina",
+
+    // Enables/Disables font ligatures.
+    "editor.fontLigatures": true,
 
     // Controls the font size in pixels.
-    "editor.fontSize": 14,
+    "editor.fontSize": 13,
 
     // Insert snippets when their prefix matches. Works best when 'quickSuggestions' aren't enabled.
     "editor.tabCompletion": "on",
@@ -35,7 +38,7 @@
     "terminal.external.osxExec": "iTerm.app",
 
     // Controls the font size in pixels of the terminal.
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 13,
 
     // The path of the shell that the terminal uses on OS X.
     "terminal.integrated.shell.osx": "/bin/zsh",
