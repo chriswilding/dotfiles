@@ -129,7 +129,7 @@ gpgconf --launch gpg-agent
 export HOMEBREW_NO_ANALYTICS=1
 
 # java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
 
 # latex
 export PATH="/usr/local/texlive/2017basic/bin/x86_64-darwin:$PATH"
