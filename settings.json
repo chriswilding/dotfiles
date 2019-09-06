@@ -64,37 +64,5 @@
     "workbench.enableExperiments": false,
 
     // Controls which editor is shown at startup, if none is restored from the previous session. Select 'none' to start without an editor, 'welcomePage' to open the Welcome page (default), 'newUntitledFile' to open a new untitled file (only opening an empty workspace).
-    "workbench.startupEditor": "newUntitledFile",
-
-    // Extensions
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
-        }
-    ],
-
-    "vim.useSystemClipboard": true,
-
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [">"],
-            "commands": ["editor.action.indentLines"]
-        },
-        {
-            "before": ["<"],
-            "commands": ["editor.action.outdentLines"]
-        },
-        {
-            "before": [
-                "p",
-            ],
-            "after": [
-                "p",
-                "g",
-                "v",
-                "y"
-            ]
-        }
-    ],
+    "workbench.startupEditor": "newUntitledFile"
 }
