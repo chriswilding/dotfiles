@@ -55,7 +55,7 @@
 	gpgSign = true
 [core]
 	autocrlf = input
-	editor = code --wait
+	editor = vim
 	excludesFile = ~/.gitignore_global
 	pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
 	whitespace = cr-at-eol,blank-at-eof,blank-at-eol,tab-in-indent
