@@ -57,7 +57,7 @@ export ZSH_TMUX_AUTOSTART="false"
 source $ZSH/oh-my-zsh.sh
 
 # source zshrc content that is outside of source control
-if [ -f ~/.zshrc_private ] then;
+if [ -f ~/.zshrc_private ]; then
   source ~/.zshrc_private
 fi
 
@@ -97,11 +97,6 @@ export MANPATH="/usr/local/man:$MANPATH"
 # bin
 export PATH="$HOME/bin:$PATH"
 
-# exercism
-if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
-  source ~/.config/exercism/exercism_completion.zsh
-fi
-
 # flyway
 export PATH="$HOME/bin/flyway:$PATH"
 
@@ -133,11 +128,6 @@ export NVM_DIR="$HOME/.nvm"
 export DEFAULT_NODE_VERSION="10.16.3"
 export PATH="${HOME}/.nvm/versions/node/v${DEFAULT_NODE_VERSION}/bin:${PATH}"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" --no-use
-
-# travis
-if [ -f ~/.travis/travis.sh ]; then
-  source ~/.travis/travis.sh
-fi
 
 # visual studio code
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
