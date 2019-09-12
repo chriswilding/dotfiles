@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl vi-mode)
+plugins=(git vi-mode)
 
 # User configuration
 export ZSH_TMUX_AUTOSTART="false"
@@ -57,8 +57,7 @@ export ZSH_TMUX_AUTOSTART="false"
 source $ZSH/oh-my-zsh.sh
 
 # source zshrc content that is outside of source control
-if [ -r ~/.zshrc_private ]
-then
+if [ -f ~/.zshrc_private ] then;
   source ~/.zshrc_private
 fi
 
@@ -90,14 +89,6 @@ weather() {
   fi
   curl "http://wttr.in/${location}"
 }
-
-# vi-mode plugin
-bindkey '\033[1~' beginning-of-line
-bindkey '\033[4~' end-of-line
-bindkey '^?' backward-delete-char
-bindkey '^[[3~' delete-char
-bindkey -M menuselect '^[[Z' reverse-menu-complete
-bindkey -M viins 'jk' vi-cmd-mode
 
 # path
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
@@ -137,9 +128,11 @@ export PATH="/usr/local/texlive/2017basic/bin/x86_64-darwin:$PATH"
 # less
 unset LESS
 
-# node
+# nvm
 export NVM_DIR="$HOME/.nvm"
-source "/usr/local/opt/nvm/nvm.sh"
+export DEFAULT_NODE_VERSION="10.16.3"
+export PATH="${HOME}/.nvm/versions/node/v${DEFAULT_NODE_VERSION}/bin:${PATH}"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" --no-use
 
 # travis
 if [ -f ~/.travis/travis.sh ]; then
