@@ -2,6 +2,8 @@ call plug#begin('~/.local/share/nvim/plug')
 Plug 'airblade/vim-gitgutter'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'dense-analysis/ale'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'jremmen/vim-ripgrep'
@@ -11,12 +13,8 @@ Plug 'mhinz/vim-mix-format'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': [ 'css', 'graphql', 'javascript', 'json', 'less', 'markdown', 'scss', 'typescript' ] }
 Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeFind', 'NERDTreeToggle'] }
 Plug 'sheerun/vim-polyglot'
-Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
@@ -32,10 +30,8 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'trevordmiller/nova-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'w0rp/ale'
 call plug#end()
 
 augroup Json
@@ -56,7 +52,7 @@ augroup Netrw
   autocmd BufWinEnter * if &filetype != 'netrw' | set bufhidden=hide | endif
 augroup END
 
-colorscheme nova
+color dracula
 
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 command! -bang Q quit<bang>
@@ -75,11 +71,11 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_skip_empty_sections = 1
 let g:airline_theme='hybrid'
+let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 let g:ale_fixers = { 'javascript': ['eslint'] }
 let g:ale_lint_on_save = 1
 let g:ale_sign_column_always = 1
-let g:deoplete#enable_at_startup = 1
 let g:mix_format_on_save = 1
 let g:mix_format_silent_errors = 1
 let g:polyglot_disabled = ['elixir', 'html', 'javascript', 'javascript.jsx', 'scss']
@@ -101,7 +97,6 @@ nnoremap Y y$
 nnoremap j gj
 nnoremap k gk
 
-set background=dark
 set clipboard+=unnamedplus
 set complete+=k
 set completeopt-=preview
