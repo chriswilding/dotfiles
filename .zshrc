@@ -100,6 +100,9 @@ export PATH="$HOME/bin:$PATH"
 # flyway
 export PATH="$HOME/bin/flyway:$PATH"
 
+# fnm
+eval "$(fnm env --multi)"
+
 # fzf
 export FZF_DEFAULT_OPTS="-i"
 if [ -f ~/.fzf.zsh ]; then
@@ -122,12 +125,6 @@ export PATH="/usr/local/texlive/2017basic/bin/x86_64-darwin:$PATH"
 
 # less
 unset LESS
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-export DEFAULT_NODE_VERSION="10.16.3"
-export PATH="${HOME}/.nvm/versions/node/v${DEFAULT_NODE_VERSION}/bin:${PATH}"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" --no-use
 
 # vim
 alias vim="nvim"
