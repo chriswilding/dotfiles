@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
+plugins=(git)
 
 # User configuration
 export ZSH_TMUX_AUTOSTART="false"
@@ -65,7 +65,7 @@ fi
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
