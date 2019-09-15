@@ -34,5 +34,4 @@
 [user]
 	email = hello@chriswilding.co.uk
 	name = Chris Wilding
-	signingKey = 1CD65A7C55F940A1
 	useConfigOnly = true
