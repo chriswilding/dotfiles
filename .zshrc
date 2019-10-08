@@ -100,9 +100,6 @@ export PATH="$HOME/bin:$PATH"
 # flyway
 export PATH="$HOME/bin/flyway:$PATH"
 
-# fnm
-eval "$(fnm env --multi)"
-
 # fzf
 export FZF_DEFAULT_OPTS="-i"
 if [ -f ~/.fzf.zsh ]; then
