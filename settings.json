@@ -3,19 +3,30 @@
     // Controls the font family.
     "editor.fontFamily": "FiraCode-Retina",
 
-    // Enables/Disables font ligatures.
+    // Configures font ligatures or font features.
     "editor.fontLigatures": true,
 
     // Controls the font size in pixels.
     "editor.fontSize": 13,
 
-    // Insert snippets when their prefix matches. Works best when 'quickSuggestions' aren't enabled.
-    "editor.tabCompletion": "on",
-
-    // Controls how the editor should render whitespace characters, possibilities are 'none', 'boundary', and 'all'. The 'boundary' option does not render single spaces between words.
+    // Controls how the editor should render whitespace characters.
+    //  - none
+    //  - boundary: Render whitespace characters except for single spaces between words.
+    //  - selection: Render whitespace characters only on selected text.
+    //  - all
     "editor.renderWhitespace": "all",
 
-    // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
+    // Enables tab completions.
+    //  - on: Tab complete will insert the best matching suggestion when pressing tab.
+    //  - off: Disable tab completions.
+    //  - onlySnippets: Tab complete snippets when their prefix match. Works best when 'quickSuggestions' aren't enabled.
+    "editor.tabCompletion": "on",
+
+    // Controls auto save of dirty editors. Read more about autosave [here](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save).
+    //  - off: A dirty editor is never automatically saved.
+    //  - afterDelay: A dirty editor is automatically saved after the configured `files.autoSaveDelay`.
+    //  - onFocusChange: A dirty editor is automatically saved when the editor loses focus.
+    //  - onWindowChange: A dirty editor is automatically saved when the window loses focus.
     "files.autoSave": "onFocusChange",
 
     // When enabled, insert a final new line at the end of the file when saving it.
@@ -27,46 +38,52 @@
     // Enables commit signing with GPG.
     "git.enableCommitSigning": true,
 
-    // Enable usage data and errors to be sent to Microsoft.
-    "telemetry.enableTelemetry": false,
+    // Specifies extra VM arguments used to launch the Java Language Server. Eg. use `-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m ` to optimize memory usage for container environments with the parallel garbage collector
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/Users/chris/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
 
-    // Enable crash reports to be sent to Microsoft.
+    // Enable/disable auto organize imports on save action
+    "java.saveActions.organizeImports": true,
+
+    // Enable/disable the semantic highlighting.
+    "java.semanticHighlighting.enabled": true,
+
+    // Disable sending anonymous usage statistics
+    "sonarlint.disableTelemetry": true,
+
+    // Enable crash reports to be sent to a Microsoft online service.
     // This option requires restart to take effect.
     "telemetry.enableCrashReporter": false,
 
-    // Customizes which terminal application to run on OS X.
+    // Enable usage data and errors to be sent to a Microsoft online service.
+    "telemetry.enableTelemetry": false,
+
+    // Customizes which terminal application to run on macOS.
     "terminal.external.osxExec": "iTerm.app",
 
     // Controls the font size in pixels of the terminal.
     "terminal.integrated.fontSize": 13,
 
-    // The path of the shell that the terminal uses on OS X.
-    "terminal.integrated.shell.osx": "/bin/zsh",
-
-
-    // Specifies the color theme used in the workbench.
-    "workbench.colorTheme": "Dracula",
-
-    // Controls font aliasing method in the workbench.
-    // - default: Sub-pixel font smoothing. On most non-retina displays this will give the sharpest text
-    // - antialiased: Smooth the font on the level of the pixel, as opposed to the subpixel. Can make the font appear lighter overall
-    // - none: Disables font smoothing. Text will show with jagged sharp edges
-    // - auto: Applies `default` or `antialiased` automatically based on the DPI of displays.
-    "workbench.fontAliasing": "auto",
+    // Enable/disable telemetry reporting for this plugin. The global `telemetry.enableTelemetry` is also respected. If the global is disabled, this setting has no effect.
+    "terraform.telemetry.enabled": false,
 
     // Enables macOS Sierra window tabs. Note that changes require a full restart to apply and that native tabs will disable a custom title bar style if configured.
     "window.nativeTabs": true,
 
-    // Controls if folders should open in a new window or replace the last active window.
-    // - default: folders will open in a new window unless a folder is picked from within the application (e.g. via the File menu)
-    // - on: folders will open in a new window
-    // - off: folders will replace the last active window
-    // Note that there can still be cases where this setting is ignored (e.g. when using the -new-window or -reuse-window command line option).
+    // Controls whether folders should open in a new window or replace the last active window.
+    // Note that there can still be cases where this setting is ignored (e.g. when using the `--new-window` or `--reuse-window` command line option).
+    //  - on: Folders will open in a new window.
+    //  - off: Folders will replace the last active window.
+    //  - default: Folders will open in a new window unless a folder is picked from within the application (e.g. via the File menu).
     "window.openFoldersInNewWindow": "on",
 
     // Fetches experiments to run from a Microsoft online service.
     "workbench.enableExperiments": false,
 
-    // Controls which editor is shown at startup, if none is restored from the previous session. Select 'none' to start without an editor, 'welcomePage' to open the Welcome page (default), 'newUntitledFile' to open a new untitled file (only opening an empty workspace).
+    // Controls which editor is shown at startup, if none are restored from the previous session.
+    //  - none: Start without an editor.
+    //  - welcomePage: Open the Welcome page (default).
+    //  - readme: Open the README when opening a folder that contains one, fallback to 'welcomePage' otherwise.
+    //  - newUntitledFile: Open a new untitled file (only applies when opening an empty workspace).
+    //  - welcomePageInEmptyWorkbench: Open the Welcome page when opening an empty workbench.
     "workbench.startupEditor": "newUntitledFile"
 }
