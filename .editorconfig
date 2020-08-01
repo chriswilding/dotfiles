@@ -8,13 +8,13 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{erl,hrl,py}]
-indent_size = 4
-indent_style = space
-
 [*.go]
 indent_size = 8
 indent_style = tab
+
+[*.py]
+indent_size = 4
+indent_style = space
 
 [Makefile]
 indent_size = 8
