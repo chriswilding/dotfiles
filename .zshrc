@@ -97,14 +97,14 @@ export MANPATH="/usr/local/man:$MANPATH"
 # bin
 export PATH="$HOME/bin:$PATH"
 
-# flyway
-export PATH="$HOME/bin/flyway:$PATH"
-
 # fzf
 export FZF_DEFAULT_OPTS="-i"
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
 fi
+
+# go
+export PATH="$PATH:/usr/local/go/bin"
 
 # gpg
 export GPG_TTY=$(tty)
@@ -129,7 +129,11 @@ alias vim="nvim"
 # visual studio code
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
+# yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 # zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
