@@ -9,9 +9,6 @@
     // Controls the font family.
     "editor.fontFamily": "FiraCode-Retina",
 
-    // Configures font ligatures or font features.
-    "editor.fontLigatures": true,
-
     // Controls the font size in pixels.
     "editor.fontSize": 13,
 
