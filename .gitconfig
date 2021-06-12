@@ -4,7 +4,6 @@
 	gpgSign = true
 [core]
 	autocrlf = input
-	editor = vim
 	excludesFile = ~/.gitignore_global
 	pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
 	whitespace = cr-at-eol,blank-at-eof,blank-at-eol,tab-in-indent
@@ -34,6 +33,6 @@
 [submodule]
 	fetchJobs = 4
 [user]
-	email = hello@chriswilding.co.uk
+	email = chris.wilding@cinch.co.uk
 	name = Chris Wilding
 	useConfigOnly = true

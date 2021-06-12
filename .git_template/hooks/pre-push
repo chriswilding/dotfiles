@@ -4,7 +4,7 @@ set -e
 
 BRANCH=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 
-if [ "$BRANCH" = "master" ]; then
-    echo "Push to master prevented by pre-push hook. Use '--no-verify' to skip the pre-push hook"
+if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then
+    echo "Push to $BRANCH prevented by pre-push hook. Use '--no-verify' to skip the pre-push hook"
     exit 1
 fi
