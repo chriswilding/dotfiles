@@ -96,6 +96,9 @@ export EDITOR="code"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# aws
+export AWS_DEFAULT_REGION="eu-west-1"
+
 # bin
 export PATH="$HOME/bin:$PATH"
 
@@ -122,7 +125,6 @@ export NVM_DIR="$HOME/.nvm"
 source_nvm() {
   source "$NVM_DIR/nvm.sh"
 }
-
 
 # visual studio code
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
