@@ -1,7 +1,7 @@
 [branch]
 	autoSetupMerge = true
 [commit]
-	gpgSign = true
+	gpgSign = false
 [core]
 	autocrlf = input
 	excludesFile = ~/.gitignore_global
@@ -33,6 +33,6 @@
 [submodule]
 	fetchJobs = 4
 [user]
-	email = chris.wilding@cinch.co.uk
+	email = hello@chriswilding.co.uk
 	name = Chris Wilding
 	useConfigOnly = true
