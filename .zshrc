@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(fzf git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,23 +104,12 @@ export PATH="$HOME/bin:$PATH"
 
 # fzf
 export FZF_DEFAULT_OPTS="-i"
-if [ -f ~/.fzf.zsh ]; then
-  source ~/.fzf.zsh
-fi
 
-# gpg
-# export GPG_TTY=$(tty)
-# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-# gpgconf --launch gpg-agent
+# go
+export PATH="$(go env GOPATH)/bin:$PATH"
 
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
-
-# intellij
-alias idea="open -na \"IntelliJ IDEA.app\" --args \"$@\""
-
-# java
-export JAVA_HOME=$(/usr/libexec/java_home)
 
 # less
 unset LESS
