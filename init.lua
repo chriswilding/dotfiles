@@ -30,7 +30,6 @@ require('packer').startup(function(use)
   use 'tpope/vim-rhubarb'
   use 'tpope/vim-sleuth'
   use 'tpope/vim-surround'
-  use 'tpope/vim-vinegar'
   use 'wbthomason/packer.nvim'
   use 'windwp/nvim-autopairs'
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
@@ -74,7 +73,6 @@ require('nvim-autopairs').setup({ check_ts = true })
 
 require('lualine').setup {
   options = {
-    icons_enabled = false,
     theme = 'nord',
   },
   tabline = {
@@ -147,7 +145,7 @@ require('nvim-treesitter.configs').setup {
 
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
 end
 
 local feedkey = function(key, mode)
@@ -159,7 +157,7 @@ local cmp = require('cmp')
 cmp.setup {
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
+      vim.fn['vsnip#anonymous'](args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert({
@@ -173,8 +171,8 @@ cmp.setup {
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      elseif vim.fn["vsnip#available"](1) == 1 then
-        feedkey("<Plug>(vsnip-expand-or-jump)", "")
+      elseif vim.fn['vsnip#available'](1) == 1 then
+        feedkey('<Plug>(vsnip-expand-or-jump)', '')
       elseif has_words_before() then
         cmp.complete()
       else
@@ -184,8 +182,8 @@ cmp.setup {
     ['<S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
-      elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-        feedkey("<Plug>(vsnip-jump-prev)", "")
+      elseif vim.fn['vsnip#jumpable'](-1) == 1 then
+        feedkey('<Plug>(vsnip-jump-prev)', '')
       end
     end, { 'i', 's' }),
   }),
@@ -197,7 +195,7 @@ cmp.setup {
   }),
 }
 
-local lspconfig = require 'lspconfig'
+local lspconfig = require('lspconfig')
 local on_attach = function(_, bufnr)
   local opts = { buffer = bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
@@ -215,43 +213,50 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
   vim.keymap.set('n', '<leader>so', require('telescope.builtin').lsp_document_symbols, opts)
-  vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting, {})
+  vim.api.nvim_create_user_command('Format', vim.lsp.buf.formatting, {})
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-lspconfig['gopls'].setup{
+lspconfig['gopls'].setup {
   cmd = {'gopls'},
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
     gopls = {
-      experimentalPostfixCompletions = true,
       analyses = {
-        unusedparams = true,
+        fieldalignment = true,
+        nilness = true,
         shadow = true,
+        unusedparams = true,
+        unusedwrite = true,
+        useany = true,
       },
+      experimentalWorkspaceModule = true,
+      gofumpt = true,
+      semanticTokens = true,
       staticcheck = true,
+      usePlaceholders = true,
     },
   },
-  init_options = {
-    usePlaceholders = true,
-  }
 }
 
-lspconfig['rust_analyzer'].setup{
+lspconfig['rust_analyzer'].setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
     ['rust-analyzer'] = {
       assist = {
-          importGranularity = "module",
-          importPrefix = "self",
+          importGranularity = 'module',
+          importPrefix = 'self',
       },
       cargo = {
           loadOutDirsFromCheck = true
+      },
+      checkOnSave = {
+        command = 'clippy'
       },
       procMacro = {
           enable = true
@@ -259,24 +264,6 @@ lspconfig['rust_analyzer'].setup{
     }
   }
 }
-
-function organize_imports(wait_ms)
-  local params = vim.lsp.util.make_range_params()
-  params.context = {only = {"source.organizeImports"}}
-  local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, wait_ms)
-  for _, res in pairs(result or {}) do
-    for _, r in pairs(res.result or {}) do
-      if r.edit then
-        vim.lsp.util.apply_workspace_edit(r.edit, "UTF-8")
-      else
-        vim.lsp.buf.execute_command(r.command)
-      end
-    end
-  end
-end
-
-local organize_imports_group = vim.api.nvim_create_augroup('OrganizeImports', { clear = true })
-vim.api.nvim_create_autocmd('BufWritePre', { command = 'lua organize_imports(1000)', group = organize_imports_group, pattern = '*.go' })
 
 local highlight_group = vim.api.nvim_create_augroup('Highlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -287,13 +274,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+vim.cmd([[ autocmd BufWritePre * lua vim.lsp.buf.formatting_sync() ]])
 vim.cmd([[ command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args> ]])
 vim.cmd([[ command! -bang Q quit<bang> ]])
 vim.cmd([[ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args> ]])
 
 vim.keymap.set('i', 'jk', '<esc>', { noremap = true })
-
-vim.keymap.set('n', '<C-p>', ':Telescope file_browser<CR>', { noremap = true })
 vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { noremap = true })
 vim.keymap.set('n', '<Tab>', ':bnext<CR>', { noremap = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -303,20 +289,17 @@ vim.keymap.set('n', '<leader>fp', ":let @+ = expand('%')<CR>", { silent = true }
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+vim.keymap.set('n', '<leader>-', function() require('telescope').extensions.file_browser.file_browser({ hidden = true }) end, { noremap = true })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers)
-vim.keymap.set('n', '<leader>sf', function()
-  require('telescope.builtin').find_files { previewer = false }
-end)
-vim.keymap.set('n', '<leader>sb', require('telescope.builtin').current_buffer_fuzzy_find)
-vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags)
-vim.keymap.set('n', '<leader>st', require('telescope.builtin').tags)
-vim.keymap.set('n', '<leader>sd', require('telescope.builtin').grep_string)
-vim.keymap.set('n', '<leader>sp', require('telescope.builtin').live_grep)
-vim.keymap.set('n', '<leader>so', function()
-  require('telescope.builtin').tags { only_current_buffer = true }
-end)
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles)
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+vim.keymap.set('n', '<leader>sb', require('telescope.builtin').current_buffer_fuzzy_find)
+vim.keymap.set('n', '<leader>sd', require('telescope.builtin').grep_string)
+vim.keymap.set('n', '<leader>sf', function() require('telescope.builtin').find_files({ previewer = false }) end)
+vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags)
+vim.keymap.set('n', '<leader>so', function() require('telescope.builtin').tags({ only_current_buffer = true }) end)
+vim.keymap.set('n', '<leader>sp', require('telescope.builtin').live_grep)
+vim.keymap.set('n', '<leader>st', require('telescope.builtin').tags)
 
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
