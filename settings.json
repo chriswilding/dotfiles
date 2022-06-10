@@ -1,0 +1,62 @@
+{
+	// Controls the font family.
+	"editor.fontFamily": "Source Code Pro",
+
+	// Controls the font size in pixels.
+	"editor.fontSize": 13,
+
+	// Format a file on save. A formatter must be available, the file must not be saved after delay, and the editor must not be shutting down.
+	"editor.formatOnSave": false,
+
+	// Controls how the editor should render whitespace characters.
+	//  - none
+	//  - boundary: Render whitespace characters except for single spaces between words.
+	//  - selection: Render whitespace characters only on selected text.
+	//  - trailing: Render only trailing whitespace characters.
+	//  - all
+	"editor.renderWhitespace": "all",
+
+	// Specifies the color theme used in the workbench.
+	"workbench.colorTheme": "Nord",
+
+	// Fetches experiments to run from a Microsoft online service.
+	"workbench.enableExperiments": false,
+
+	// Controls [auto save](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save) of editors that have unsaved changes.
+	//  - off: An editor with changes is never automatically saved.
+	//  - afterDelay: An editor with changes is automatically saved after the configured `files.autoSaveDelay`.
+	//  - onFocusChange: An editor with changes is automatically saved when the editor loses focus.
+	//  - onWindowChange: An editor with changes is automatically saved when the window loses focus.
+	"files.autoSave": "onFocusChange",
+
+	// When enabled, will trim all new lines after the final new line at the end of the file when saving it.
+	"files.trimFinalNewlines": true,
+
+	// When enabled, will trim trailing whitespace when saving a file.
+	"files.trimTrailingWhitespace": true,
+
+	//
+	// Controls Visual Studio Code telemetry, first-party extension telemetry and participating third-party extension telemetry. Some third party extensions might not respect this setting. Consult the specific extension's documentation to be sure. Telemetry helps us better understand how Visual Studio Code is performing, where improvements need to be made, and how features are being used. Read more about the [data we collect](https://aka.ms/vscode-telemetry) and our [privacy statement](https://go.microsoft.com/fwlink/?LinkId=786907). A full restart of the application is necessary for crash reporting changes to take effect.
+	//
+	// &nbsp;
+	//
+	// The following table outlines the data sent with each setting:
+	//
+	// |       | Crash Reports | Error Telemetry | Usage Data |
+	// |:------|:---------------------:|:---------------:|:--------------:|
+	// | all   |            ✓          |        ✓        |        ✓       |
+	// | error |            ✓          |        ✓        |        -       |
+	// | crash |            ✓          |        -        |        -       |
+	// | off   |            -          |        -        |        -       |
+	//
+	//
+	// &nbsp;
+	//
+	// ****Note:*** If this setting is 'off', no telemetry will be sent regardless of other telemetry settings. If this setting is set to anything except 'off' and telemetry is disabled with deprecated settings, no telemetry will be sent.*
+	//
+	//  - all: Sends usage data, errors, and crash reports.
+	//  - error: Sends general error telemetry and crash reports.
+	//  - crash: Sends OS level crash reports.
+	//  - off: Disables all product telemetry.
+	"telemetry.telemetryLevel": "off",
+}
