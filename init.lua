@@ -23,7 +23,8 @@ require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'nvim-treesitter/nvim-treesitter-textobjects'
-  use 'shaunsingh/nord.nvim'
+  -- use 'Mofiqul/dracula.nvim'
+  use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'tpope/vim-fugitive'
   use 'tpope/vim-projectionist'
   use 'tpope/vim-repeat'
@@ -32,16 +33,20 @@ require('packer').startup(function(use)
   use 'tpope/vim-surround'
   use 'wbthomason/packer.nvim'
   use 'windwp/nvim-autopairs'
-  use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  use { 'lewis6991/gitsigns.nvim' }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 end)
 
+
+vim.g.catppuccin_flavour = 'macchiato' -- latte, frappe, macchiato, mocha
+require("catppuccin").setup()
+vim.cmd [[colorscheme catppuccin]]
+
 vim.g.EditorConfig_exclude_patterns = { 'fugitive://.*' }
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-vim.g.nord_italic = false
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.o.breakindent = true
 vim.o.completeopt = 'menuone,noselect'
@@ -64,8 +69,6 @@ vim.g.projectionist_heuristics = {
   },
 }
 
-require('nord').set()
-
 require('Comment').setup()
 require('gitsigns').setup()
 require('indent_blankline').setup()
@@ -73,7 +76,7 @@ require('nvim-autopairs').setup({ check_ts = true })
 
 require('lualine').setup {
   options = {
-    theme = 'nord',
+    theme = 'catppuccin',
   },
   tabline = {
     lualine_a = { 'buffers' },
@@ -217,7 +220,7 @@ local on_attach = function(_, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 lspconfig['gopls'].setup {
@@ -275,6 +278,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.cmd([[ autocmd BufWritePre * lua vim.lsp.buf.formatting_sync() ]])
+-- vim.cmd([[ colorscheme tokyonight ]])
+-- vim.cmd([[ colorscheme nord ]])
+-- vim.cmd([[ colorscheme dracula ]])
 vim.cmd([[ command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args> ]])
 vim.cmd([[ command! -bang Q quit<bang> ]])
 vim.cmd([[ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args> ]])
