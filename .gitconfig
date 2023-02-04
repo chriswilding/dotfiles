@@ -1,28 +1,13 @@
 [branch]
 	autoSetupMerge = true
-[commit]
-	gpgSign = false
 [core]
-	autocrlf = input
 	excludesFile = ~/.gitignore_global
 	pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
 	whitespace = cr-at-eol,blank-at-eof,blank-at-eol,tab-in-indent
 [credential]
 	helper = osxkeychain
-[diff]
-	compactionHeuristic = true
-[fetch]
-	prune = true
-[gpg]
-	program = gpg
-[grep]
-	threads = 8
 [init]
 	templateDir = ~/.git_template
-[help]
-	autoCorrect = 1
-[push]
-	default = simple
 [rebase]
 	autoStash = true
 [rerere]
@@ -30,8 +15,6 @@
 	enabled = true
 [stash]
 	showPatch = true
-[submodule]
-	fetchJobs = 4
 [user]
 	email = hello@chriswilding.co.uk
 	name = Chris Wilding
